@@ -1,10 +1,10 @@
-# SuyBot Bot Para Whatsapp 
+# bytuSB Bot Para Whatsapp 
 
 <p align="center">
-<img src="https://github.com/shanduy/ShanBot/blob/main/temples/ezgif-4-5e4fce2c4bbe.gif" alt="GIF" width="500" height="281"/>
+<img src="https://raw.githubusercontent.com/Axel-bytu/bytuSB/main/banned/bytuSB.jpg" width="500" height="281"/>
 </p>
 <p align="center">
-<a href="#"><img title="ShanBot" src="https://img.shields.io/badge/ShanBot -purple?colorA=%cc33ff&colorB=%cc33ff&style=for-the-badge"></a>
+<a href="#"><img title="bytuSB" src="https://img.shields.io/badge/bytuSB -purple?colorA=%cc33ff&colorB=%cc33ff&style=for-the-badge"></a>
 </p>
 
 <p align="center">
@@ -15,30 +15,13 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/shanduy"><img title="Creador" src="https://img.shields.io/badge/Author-Shanduy-purple.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/Axel-bytu"><img title="Creador" src="https://img.shields.io/badge/Author-Axelbytu-purple.svg?style=for-the-badge&logo=github"></a>
 </p>
 
-<p align="center">
-  <a href="https://www.youtube.com/channel/UCbNOLyHAy-SL4D9iz9Oi0lw"><img src="https://img.shields.io/badge/YouTube-thepavos-ff0000?style=for-the-badge&logo=youtube&logoColor=ff0000&lihttps://youtu.be/n9fUrhPf5-8-8" /></a>
-  <a name=hendra759&label=VIEWS&style=flat-square&color=orange" />
-
-<p align="center">
-Mis Redes Sociales Y Mi Whatsapp Para Resolver Tus Problemas
-</p>
-
-<p align='center'>
-   <a href="https://www.instagram.com/thepavos/"><img height="30" src="https://github.com/shanduy/ShanBot/blob/main/temples/580b57fcd9996e24bc43c521.png?raw=true"></a>&nbsp;&nbsp;
-   <a href="https://www.youtube.com/watch?v=2LQSzEbpJ-M"><img height="30" src="https://github.com/shanduy/ShanBot/blob/main/temples/youtube-logo-6-2.png?raw=true"></a>&nbsp;&nbsp;
-   <a href="https://wa.me/593967689722"><img height="30" src="https://github.com/shanduy/ShanBot/blob/main/temples/d9d97d48264770f85d35c208f279152c.png?raw=true"></a>
-</P>
 
 
-
-# ShanBot
-ULTIMA VERSION 3.0
-
-Pasos para instalar el bot via termux
-https://www.youtube.com/watch?v=2LQSzEbpJ-M
+# bytuSB
+ULTIMA VERSION 1.0
 
 
 ## Como Actualizar Tu Bot 🔄
@@ -51,8 +34,8 @@ Para eso vas a cerrar sesión de whatsapp wed en el numero de tu bot y en termux
 Una vez hecho eso vas a colorcar en termux los siguientes comandos
 
 ```bash
-> git clone https://github.com/shanduy/ShanBot
-> cd ShanBot
+> git clone https://github.com/Axel-bytu/bytuSB
+> cd bytuSB
 > npm start
 ```
 
@@ -63,7 +46,7 @@ Te dara un nuevo codigo y lo escaneas con tu numero del bot y ya estara la actua
 
 
 
-## PASOS PARA INSTALAR ShanBot
+## PASOS PARA INSTALAR bytuSB
 
 ## Primero Configurar termux
 Una vez descargado termux colocas el siguiente comando
@@ -85,8 +68,8 @@ Pasos para instalar el bot en termux
 > pkg install ffmpeg
 > pkg install nodejs
 > pkg install wget
-> git clone https://github.com/shanduy/ShanBot
-> cd ShanBot
+> git clone https://github.com/Axel-bytu/bytuSB
+> cd bytuSB
 > bash install.sh
 > npm start
 > Y escaneas el QR con tu Whatsapp
@@ -103,13 +86,13 @@ Pasos para instalar el bot en termux
 Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos
 
 ```bash
-> cd ShanBot
+> cd bytuSB
 > npm start
 ```
 
 ## Y Listo Ya Estara En Funcionamiento. Espero Te Alla Ayudado :)
 
-## SuyBot
+## ⚡ABT⚡
 
 
 
