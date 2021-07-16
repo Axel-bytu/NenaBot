@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "Shan",
+  "author": "Axel-bytu",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.1",
