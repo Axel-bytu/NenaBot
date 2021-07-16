@@ -1,10 +1,10 @@
 const version = (prefix, pushname) => {
     return `
-*ShanBot 🤖 by shanduy*
+*bytuSB 🌠 by ⚡ABT⚡*
 
-*Actualizado:* 8 de julio de 2021
-*Versión actual:* 3.0
-*Ofrecida por:* shanduy™
+*Actualizado:* 16 de julio de 2021
+*Versión actual:* 1.0
+*Ofrecida por:* Axel-bytu™
 
 
 *INFORME*
@@ -15,11 +15,11 @@ Cambiare la apikey pasando un mes o si veo muchos atercados o robos
 Si vez a alguien que robo mi bot comunicate conmigo con el comando *creador
 
 
-*BLOG DE SHANBOT*
+*BLOG DE BYTUSB*
 
-https://github.com/shanduy/ShanBot
+https://github.com/Axel-bytu/bytuSB
 
-by shanduy
+by ⚡ABT⚡
 `
 
 }
