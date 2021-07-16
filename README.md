@@ -57,7 +57,7 @@ Una vez descargado termux colocas el siguiente comando
 
 ## Se te desplegara una venta y harás lo que esta en el video de abajo
 
-![Output sample](https://github.com/shanduy/ShanBot/blob/main/temples/116244521-ad43a780-a770-11eb-88c6-054fb1950bfd%20(1).gif)
+![Output sample](https://raw.githubusercontent.com/Axel-bytu/bytuSB/main/templos/116244521-ad43a780-a770-11eb-88c6-054fb1950bfd%20(1).gif)
 
 
 ## Instalar El Bot
