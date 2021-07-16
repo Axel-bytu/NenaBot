@@ -1,13 +1,11 @@
 const help = (prefix) => {
 	return `
 
-⌜ *ShanBot 🤖 by shanduy* ⌟  
+⌜ *bytuSB 🌠 by ⚡ABT⚡* ⌟  
 
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
-   ○ Creador: shanduy™ 
-   ○ Como instalar el bot: https://www.youtube.com/watch?v=2LQSzEbpJ-M
-   ○ Instagram: https://www.instagram.com/thepavos
+   ○ Creador: Axel-bytu™ 
 
 
 ◉ *NUEVOS COMANDOS*
@@ -19,14 +17,12 @@ Monas chinas
 Interactua con el bot
 
 ◉ *NUEVOS MENUS*
-○ ${prefix}juegos
-Divierte con tus amigos :)
-○ ${prefix}desmenu
-Descargar musica y videos de YT
-○ ${prefix}version
-Conoce la versión de tu bot
-○ ${prefix}welmenu
-Comandos de bienvedia a grupos
+  ║  
+  ╠ ○ ${prefix}juegos
+  ╠ ○ ${prefix}desmenu
+  ╠ ○ ${prefix}version
+  ╚ ○ ${prefix}welmenu
+
 
 ◉ *PARA USAR EL BOT*
 Registrate con el comando ${prefix}daftar y tu nombre
@@ -89,13 +85,9 @@ Para usar estas funciones el bot necesita admin
 Para activar los NSFW coloque el siguiente comando ${prefix}nsfw 1 y para desactivar los NSFW coloque ${prefix}nsfw 0
 
 
-No te olvides de seguirme en instagram flaco ;)
+by ⚡ABT⚡
 
 
-by shanduy
-
-
-⌜ *ごきげんよう :)* ⌟ 
 `
 }
 
