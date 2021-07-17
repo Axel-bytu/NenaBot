@@ -1135,9 +1135,10 @@ break
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Otaku que se esperaba'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
-						        reply('❌ *ERROR* ❌')
+					                reply('❌ *ERROR* ❌')
+                                                }
                                                 break
-					case 'nsfwbobs': 
+					  case 'nsfwbobs': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/biganimetiddies`, {method: 'get'})
