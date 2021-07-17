@@ -352,7 +352,6 @@ async function starts() {
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
                         /******Entrada ApiKey******/
-                        const BarBarKey = 'Mn2Bf58QHQ8kABoLq80g'
                         const BarBarKey = '27k8YvvqRRvjOt44L3PNgtpQzqf'
                         const ApiXteamXyz = '07b550ff483327cb'
                         /******Fin de la entrada de ApiKey******/
