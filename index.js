@@ -1,8 +1,8 @@
  /*
 * bytuSB es una creación de Axel-bytu
 * bytuSB no tiene ningun fin de lucro
-* Axel-bytu se reserva todos los derechos de autor
-* © 2021 Axel-bytu, INC.
+* ⚡ABT⚡ se reserva todos los derechos de autor
+* © 2021 ⚡ABT⚡, INC.
 
 Cualquier copia que utilize mi ApiKey sera dado de baja
 
