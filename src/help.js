@@ -52,6 +52,10 @@ Registrate con el comando ${prefix}daftar y tu nombre
   ╠ ○ ${prefix}idioma
   ╚ ○ ${prefix}tts es (mas texto)
 
+◉ *FUN
+  ║
+  ╚ ○ ${prefix}nena (mas texto) 
+
 ◉ *OTROS*
   ║
   ╠ ○ ${prefix}wame
