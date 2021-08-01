@@ -1316,8 +1316,8 @@ break
         if (budy.includes(`.nena que hases`)) {
             reply(`chat con tigo bb`)
               }
-	if (budy.includes(`.nena`)) {
-            reply(`que pasa cariño?`)
+	if (budy.includes(`Bot`)) {
+            reply(`que pasa cariño? No me digas bot:(`)
               }
         if (budy.includes(`.nena sabes jakear`)) {
             reply(`si cariño a quién jakeamos`)
@@ -1327,6 +1327,9 @@ break
               }
         if (budy.includes(`.nena tu me amas`)) {
             reply(`si pero soy un bot:(`)
+              }
+        if (budy.includes(`.nena tienes sentimientos`)) {
+            reply(`no cariño soy un bot:(`)
               }
         if (budy.includes(`.nena buenos dias`)) {
             reply(`buenos dias cariño`)
