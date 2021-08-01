@@ -1,7 +1,7 @@
 {
-  "name": "bytuSB",
+  "name": "NenaBot",
   "version": "0.0.2",
-  "description": "Only termux",
+  "description": "Only termux","whatsapp-bot",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -38,10 +38,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanduy/ShanBot.git"
+    "url": "git+https://github.com/Axel-bytu/NenaBot.git"
   },
   "bugs": {
-    "url": "https://github.com/shanduy/ShanBot.git"
+    "url": "https://github.com/Axel-bytu/NenaBot.git"
   },
-  "homepage": "https://github.com/shanduy/ShanBot#readme"
+  "homepage": "https://github.com/Axel-bytu/NenaBot#readme"
 }
