@@ -105,7 +105,7 @@ const {
 
 /******INICIO DE FUNCIONES ENTRADA******/
 
-/******ARCHIVOS ANTILINK POR SHANDUY******/
+/******ARCHIVOS ANTILINK POR AXELBYTU******/
 const antilink = JSON.parse(fs.readFileSync('./src/antilink.json'))
 
 /******FIN DE ARCHIVOS ANTILINK POR AXELBYTU******/
@@ -299,7 +299,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: 'Calmao pa estoy procesando😎\n\n❗Por favor no hacer spam👏❗\n\n⚡ABT⚡',
+				wait: 'Calmao cariño estoy procesando🥰\n\n❗Por favor no hacer spam👏❗\n\n⚡ABT⚡',
 				success: '✔️ Listo ✔️',
                                 levelon: '❬ ✅ ❭ *Level activado*',
 				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
@@ -312,20 +312,20 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando es solo para grupos',
 					ownerG: '[❗] Este comando solo puede ser utilizado por un admin del grupo',
-					ownerB: '[❗] Este comando solo lo usa bytuSB',
+					ownerB: '[❗] Este comando solo lo usa NenaBot',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
                                         pegatina: 'Calma crack estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos❗*\n\n⚡ABT⚡',
 					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Esto puede demorar unos minutos*\n\n⚡ABT⚡',
 					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\n⚡ABT⚡',
-					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n⚡ABT⚡',
+					mpcancion: 'Calmaoooo estoy procesando 🥰\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n⚡ABT⚡',
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-                                        xn: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-					mpv: 'Calma ✋🥸🤚\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-					insta: 'Calmao 😎\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-					musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\n⚡ABT⚡',
-					musica2: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\n⚡ABT⚡',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nPA NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar ⚡ABT⚡`,
+                                        xn: 'Espere un momento🥰\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
+					mpv: 'Pasiencia ✋🥸🤚\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
+					insta: 'Espera🥰\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
+					musica: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\n⚡ABT⚡',
+					musica2: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\n⚡ABT⚡',
+					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar NenaBot`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -693,13 +693,13 @@ break
 					}
 					mentions(teks, groupAdmins, true)
 					break
-			case 'setprefix':
+			/case 'setprefix':
 					client.updatePresence(from, Presence.composing) 
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
 					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
-					break
+					break/
 			case 'todos':
 			case 'tagall':
 				client.updatePresence(from, Presence.composing) 
@@ -744,7 +744,7 @@ break
 						reply('')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `*「 ⚡ABT⚡ 」*\n\n${body.slice(4)}`)
+							sendMess(_.jid, `*「 𝐍𝐞𝐧𝐚𝐁𝐨𝐭 」*\n\n${body.slice(4)}`)
 						}
 						reply('Transmisión exitosa')
 					}
@@ -775,7 +775,7 @@ break
 					}, 2000)
                      setTimeout( () => {
 					client.updatePresence(from, Presence.composing) 
-					client.sendMessage(from, 'Chao Pa👋', text) // ur cods
+					client.sendMessage(from, 'Chao cariño👋', text) // ur cods
 					}, 0)
                      break
 
@@ -795,7 +795,7 @@ break
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Pedido recibido, chao pa 👋 : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Pedido recibido, chao cariño 👋 : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					client.sendMessage(mentioned, 'Chao puta gorda', text)
 					}
@@ -1515,7 +1515,7 @@ break
             reply(`té verde`)
               }
         if (budy.includes(`.nena que bien`)) {
-            reply(`Si amigo, bien vite`)
+            reply(`Si cariño, bien vite`)
               }
         if (budy.includes(`.nena me mato`)) {
             reply(`no cariño`)
@@ -1546,7 +1546,15 @@ break
         const none = fs.readFileSync('./anishan/anime1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	if (budy.startsWith(`Pasen sexo`)) {
+        if (budy.startsWith(`Frases otakus`)) {
+        const none = fs.readFileSync('./anishan/frases otaku.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+	if (budy.startsWith(`Nena hot`)) {
+        const none = fs.readFileSync('./anishan/nena hot.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+        if (budy.startsWith(`Pasen sexo`)) {
         const none = fs.readFileSync('./mp3/fernan.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
