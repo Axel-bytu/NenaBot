@@ -693,13 +693,13 @@ break
 					}
 					mentions(teks, groupAdmins, true)
 					break
-			/case 'setprefix':
+			/*case 'setprefix':
 					client.updatePresence(from, Presence.composing) 
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
 					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
-					break/
+					break*/
 			case 'todos':
 			case 'tagall':
 				client.updatePresence(from, Presence.composing) 
