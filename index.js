@@ -1,13 +1,13 @@
  /*
-* bytuSB es una creación de Axel-bytu
-* bytuSB no tiene ningun fin de lucro
-* ⚡ABT⚡ se reserva todos los derechos de autor
-* © 2021 ⚡ABT⚡, INC.
+* 𝐍𝐞𝐧𝐚𝐁𝐨𝐭 es una creación de Axel-bytu y Shanduy
+* 𝐍𝐞𝐧𝐚𝐁𝐨𝐭 no tiene ningun fin de lucro
+* ⚡ABT⚡y Shanduy se reserva todos los derechos de autor
+* © 2021 Shanduy, INC.
 
 Cualquier copia que utilize mi ApiKey sera dado de baja
 
 - Que hay de nuevo?
-* Nada
+* Relag y disfruta
 */
 
 const {
@@ -105,10 +105,10 @@ const {
 
 /******INICIO DE FUNCIONES ENTRADA******/
 
-/******ARCHIVOS ANTILINK POR AXELBYTU******/
+/******ARCHIVOS ANTILINK POR SHANDUY******/
 const antilink = JSON.parse(fs.readFileSync('./src/antilink.json'))
 
-/******FIN DE ARCHIVOS ANTILINK POR AXELBYTU******/
+/******FIN DE ARCHIVOS ANTILINK POR SHANDUY******/
 
 const getLevelingXp = (userId) => {
             let position = false
@@ -535,7 +535,7 @@ async function starts() {
 					}
 					break
 
-/******JUEGOS BYTU LA PUTA MADRE NO TE OLVIDES******/
+/******JUEGOS SHANDUY LA PUTA MADRE NO TE OLVIDES******/
 					
 case 'gay':
 if (!isUser) return reply(mess.only.daftarB)
@@ -884,7 +884,8 @@ break
 				case 'tucson':
 				case 'opa':
 				case 'BT':
-				case 'nefasto':
+				case 'Shan':
+                                case 'nefasto':
 				case 'stiker':
 				case 'sticker':
 				case 'stickergif':
