@@ -92,7 +92,14 @@ Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu inte
 
 ## Y Listo Ya Estara En Funcionamiento. Espero Te Alla Ayudado :)
 
-## ⚡ABT⚡
+<h3 align="center">Made with ❤️ by</h3>
+<p align="center">
+  <a href="https://github.com/Shanduy"><img src="https://avatars3.githubusercontent.com/u/28254882?s=400&u=25765902db0b709938966cf4127ac11af5eafb5d&v=4" height="128" width="128" /></a>
+  <a href="https://github.com/Axel-bytu"><img src="https://avatars2.githubusercontent.com/u/68207798?s=400&u=29439908cd661d11443391cb74f5b07267b71117&v=4" height="128" width="128" /></a>
+  <a href="https://github.com/Team-bytu"><img src="https://avatars.githubusercontent.com/u/87240647?s=400&u=c989209cfa934830a69dd2217daa65a561a64cd1&v=4" height="128" width="128" /></a>
+</p>
+
+## ⚡ABT⚡and Shanduy
 
 
 
