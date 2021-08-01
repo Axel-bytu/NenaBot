@@ -1,7 +1,7 @@
 const help = (prefix) => {
 	return `
 
-⌜ *bytuSB 🌠 by ⚡ABT⚡* ⌟  
+⌜ *𝐍𝐄𝐍𝐀𝐁𝐎𝐓 🌠 by⚡ABT⚡* ⌟  
 
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
