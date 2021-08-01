@@ -96,8 +96,6 @@ Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu inte
 <p align="center">
   <a href="https://github.com/Shanduy"><img src="https://avatars.githubusercontent.com/u/79606488?v=4" height="128" width="128" /></a>
   <a href="https://github.com/Axel-bytu"><img src="https://raw.githubusercontent.com/Axel-bytu/Batrol/main/tmp/IMG-20210524-WA0267.jpg" height="128" width="128" /></a>
-<img
-        src="https://img.shields.io/badge/teambytu%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white" />
 </p> 
 
 ## Patrosinio
