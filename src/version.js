@@ -1,8 +1,8 @@
 const version = (prefix, pushname) => {
     return `
-*bytuSB 🌠 by ⚡ABT⚡*
+*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 🌠 by ⚡ABT⚡*
 
-*Actualizado:* 16 de julio de 2021
+*Actualizado:* 1 de agosto de 2021
 *Versión actual:* 1.0
 *Ofrecida por:* Axel-bytu™
 
@@ -15,9 +15,9 @@ Cambiare la apikey pasando un mes o si veo muchos atercados o robos
 Si vez a alguien que robo mi bot comunicate conmigo con el comando *creador
 
 
-*BLOG DE BYTUSB*
+*BLOG DE NENABOT*
 
-https://github.com/Axel-bytu/bytuSB
+https://github.com/Axel-bytu/NenaBot
 
 by ⚡ABT⚡
 `
