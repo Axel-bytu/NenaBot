@@ -1,7 +1,7 @@
 {
   "name": "NenaBot",
   "version": "0.0.2",
-  "description": "Only termux","whatsapp-bot",
+  "description": "Only termux",
   "main": "index.js",
   "directories": {
     "lib": "lib"
