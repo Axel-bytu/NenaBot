@@ -1025,11 +1025,8 @@ break
                 teks = `*Datos recuperados correctamente!*\n\n*Título* : ${ytm.title}\n*Tamaño* : ${ytm.size}\n*Calidad* : ${ytm.quality}\n*Ext* : ${ytm.ext}\n*Fuente* : ${ytm.source}\n\n_Espere a que se envíe el archivo multimedia; puede tardar unos minutos_`
                 if(Number(ytm.size.split(' MB')[0]) >= 50.00) return Client.sendFileFromUrl(data.from, `${ytm.thumb}`, 'thumb.jpg', `*Datos recuperados correctamente!*\n\n*Title* : ${ytm.title}\n*Ukuran* : ${ytm.size}\n*Kualitas* : ${ytm.quality}\n*Ext* : mp3\n*Source* : ${ytm.source}\n*Link* : ${ytm.link}\n\n_Para la duración de más del límite se presenta en forma de enlace_`, data.message)
                 Client.sendFileFromUrl(data.from, ytm.thumb, 'thumb.jpg', teks, data.message)
-                Client.sendFileFromUrl(data.from, ytm.link, `${ytm.title} - Download.mp3`, ``, data.message)
-            } catch {
-                data.reply('Vaya, lo siento, el servidor tiene un error o tal vez el apikey no es válido')
-            }
-        })               
+                Client.sendFileFromUrl(data.from, ytm.link, `${ytm.title} - Download.mp3`,)
+                   
                                 break
                                 case 'daftar':
 					client.updatePresence(from, Presence.composing)
