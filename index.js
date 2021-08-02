@@ -1015,8 +1015,7 @@ break
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                        Client.cmd.on('play3', async (data) => {
-            try {
+                case 'play3':
                 if(isLimit(data.sender)) return data.reply(mess.limit)
                 if(data.body == "") return data.reply(`Enviar comando *${data.prefix}play [ link ]*\nEjemplo : ${data.prefix}play alone`)
                 data.reply(mess.wait)
@@ -1031,7 +1030,8 @@ break
                 data.reply('Vaya, lo siento, el servidor tiene un error o tal vez el apikey no es válido')
             }
         })               
-                                 case 'daftar':
+                                break
+                                case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('Ya estas registrado 🧐')
 					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar ⚡ABT⚡`)
