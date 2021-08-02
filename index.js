@@ -1015,7 +1015,23 @@ break
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                                case 'daftar':
+                        Client.cmd.on('play3', async (data) => {
+            try {
+                if(isLimit(data.sender)) return data.reply(mess.limit)
+                if(data.body == "") return data.reply(`Enviar comando *${data.prefix}play [ link ]*\nEjemplo : ${data.prefix}play alone`)
+                data.reply(mess.wait)
+                res = await axios.get(`${configs.apiUrl}/api/ytplaymp3/2?apikey=${configs.zeksKey}&q=${data.body}`)
+                if(res.data.status == false) data.reply(res.data.message)
+                ytm = res.data.result
+                teks = `*Datos recuperados correctamente!*\n\n*Título* : ${ytm.title}\n*Tamaño* : ${ytm.size}\n*Calidad* : ${ytm.quality}\n*Ext* : ${ytm.ext}\n*Fuente* : ${ytm.source}\n\n_Espere a que se envíe el archivo multimedia; puede tardar unos minutos_`
+                if(Number(ytm.size.split(' MB')[0]) >= 50.00) return Client.sendFileFromUrl(data.from, `${ytm.thumb}`, 'thumb.jpg', `*Datos recuperados correctamente!*\n\n*Title* : ${ytm.title}\n*Ukuran* : ${ytm.size}\n*Kualitas* : ${ytm.quality}\n*Ext* : mp3\n*Source* : ${ytm.source}\n*Link* : ${ytm.link}\n\n_Para la duración de más del límite se presenta en forma de enlace_`, data.message)
+                Client.sendFileFromUrl(data.from, ytm.thumb, 'thumb.jpg', teks, data.message)
+                Client.sendFileFromUrl(data.from, ytm.link, `${ytm.title} - Download.mp3`, ``, data.message)
+            } catch {
+                data.reply('Vaya, lo siento, el servidor tiene un error o tal vez el apikey no es válido')
+            }
+        })               
+                                 case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('Ya estas registrado 🧐')
 					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar ⚡ABT⚡`)
