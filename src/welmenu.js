@@ -12,7 +12,7 @@ const welmenu = (prefix, pushname) => {
 
 _Para activar este comando el bot necesita tener admin_
 
-by ⚡ABT⚡
+by 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎
 `
 
 }
