@@ -13,8 +13,6 @@ const help = (prefix) => {
 Su nombre lo dice todo (antilink)
 ○ ${prefix}otak
 Monas chinas
-○ ${prefix}shantera
-Interactua con el bot
 
 ◉ *NUEVOS MENUS*
   ║  
@@ -34,7 +32,7 @@ Registrate con el comando ${prefix}daftar y tu nombre
 
 ◉ *CREAR STICKERS*
   ║
-  ╠ ○ ${prefix}sticker
+  ╠ ○ ${prefix}s
   ╠ ○ ${prefix}attp
   ╠ Mas un texto corto
   ╠ ○ ${prefix}stickergif
