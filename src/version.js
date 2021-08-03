@@ -19,7 +19,7 @@ Si vez a alguien que robo mi bot comunicate conmigo con el comando *creador
 
 https://github.com/Axel-bytu/NenaBot
 
-by ⚡ABT⚡
+by 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎
 `
 
 }
