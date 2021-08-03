@@ -16,7 +16,7 @@ conose 5 tog de los más cachudos del grupo
 
 _*En futuras versiones colocare mas juegos :)*_
      
-by ⚡ABT⚡`
+by 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
 
 }
 
