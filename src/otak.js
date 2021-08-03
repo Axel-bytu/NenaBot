@@ -9,6 +9,8 @@ Onichan
 La toca 7w7
 Frases otakus
 Nena hot
+Pasen sexo
+Chica Igante
 
 _Ojito escribe tal como esta_
 
