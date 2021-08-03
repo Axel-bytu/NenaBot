@@ -1,7 +1,6 @@
 const toinmenu = (prefix, pushname) => {
-    return `◪ *Comandos de ⚡ABT⚡*
+    return `◪ *Comandos de 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎*
     │
-    ├─ ❏ ${prefix}setprefix
     ├─ ❏ ${prefix}block
     ├─ ❏ ${prefix}bc
     ├─ ❏ ${prefix}bcgc
