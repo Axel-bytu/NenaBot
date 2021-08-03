@@ -178,7 +178,7 @@ const getLevelingId = (userId) => {
         }
 
 function addMetadata(packname, author) {	
-	if (!packname) packname = 'ABT'; if (!author) author = 'Axel-bytu';	
+	if (!packname) packname = '𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎'; if (!author) author = 'Axel-bytu';	
 	author = author.replace(/[^a-zA-Z0-9]/g, '');	
 	let name = `${author}_${packname}`
 	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
@@ -256,7 +256,7 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Mi trolo @${num.split('@')[0]}\nTodo bien NEFASTO!!!! Bienvenido a *${mdata.subject}* el mejor grupo una locura 👉😎👈\n\nUn gusto conocerte men 😀\n\nOjito sigue las reglas del grupo si no, pa fuera mi loco los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nOjito con el spam 🧐\n\n⚡ABT⚡`
+				teks = `Mi trolo @${num.split('@')[0]}\nTodo bien NEFASTO!!!! Bienvenido a *${mdata.subject}* el mejor grupo una locura 👉😎👈\n\nUn gusto conocerte men 😀\n\nOjito sigue las reglas del grupo si no, pa fuera mi loco los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -298,7 +298,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: 'Calmao cariño estoy procesando🥰\n\n❗Por favor no hacer spam👏❗\n\n⚡ABT⚡',
+				wait: 'Calmao cariño estoy procesando🥰\n\n❗Por favor no hacer spam👏❗\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 				success: '✔️ Listo ✔️',
                                 levelon: '❬ ✅ ❭ *Level activado*',
 				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
@@ -311,20 +311,20 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando es solo para grupos',
 					ownerG: '[❗] Este comando solo puede ser utilizado por un admin del grupo',
-					ownerB: '[❗] Este comando solo lo usa NenaBot',
+					ownerB: '[❗] Este comando solo lo usa 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
-                                        pegatina: 'Calma crack estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos❗*\n\n⚡ABT⚡',
-					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Esto puede demorar unos minutos*\n\n⚡ABT⚡',
-					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\n⚡ABT⚡',
-					mpcancion: 'Calmaoooo estoy procesando 🥰\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n⚡ABT⚡',
-					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-                                        xn: 'Espere un momento🥰\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-					mpv: 'Pasiencia ✋🥸🤚\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-					insta: 'Espera🥰\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n⚡ABT⚡',
-					musica: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\n⚡ABT⚡',
-					musica2: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\n⚡ABT⚡',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar NenaBot`,
+                                        pegatina: 'Calma crack estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos❗*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Esto puede demorar unos minutos*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					mpcancion: 'Calmaoooo estoy procesando 🥰\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+                                        xn: 'Espere un momento🥰\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					mpv: 'Pasiencia ✋🥸🤚\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					insta: 'Espera🥰\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					musica: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					musica2: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -416,7 +416,7 @@ async function starts() {
  
        /******ENTRADA FIN DE FUNCIONES******/
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'ABT'; if (!author) author = 'Axel-bytu';	
+				if (!packname) packname = '𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎'; if (!author) author = 'Axel-bytu';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -610,7 +610,7 @@ break
 	    case 'owner':
                 case 'creator':
                 client.sendMessage(from, {displayname: "Axel", vcard: vcard}, MessageType.contact, { quoted: mek})
-		client.sendMessage(from, 'Arriba está el número del creador del bot <𝐍𝐞𝐧𝐚𝐁𝐨𝐭 by ⚡ABT⚡>\n\nNO SOY UN BOT LPM 😎\n\nAhi puedes resolver tus preguntas y errores :)\n\nEste no es el numero del propietario del bot que estas usando, si no del creador de la base de datos del bot❗\n\n⚡ABT⚡',MessageType.text, { quoted: mek} )
+		client.sendMessage(from, 'Arriba está el número del creador del bot <𝐍𝐞𝐧𝐚𝐁𝐨𝐭 por Axel>\n\nNO SOY UN BOT LPM 😎\n\nAhi puedes resolver tus preguntas y errores :)\n\nEste no es el numero del propietario del bot que estas usando, si no del creador de la base de datos del bot❗\n\n⚡ABT⚡',MessageType.text, { quoted: mek} )
                 const none = fs.readFileSync('./mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                 break
@@ -878,8 +878,6 @@ break
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
 						break
 				case 's':
-				case 'tucson':
-				case 'opa':
 				case 'BT':
 				case 'Shan':
                                 case 'nefasto':
@@ -966,7 +964,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nby shanduy'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nby 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1012,19 +1010,7 @@ break
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                case 'play3':
-                if(args.length < 1) return reply(mess.limit)
-                if(data.body == "") return reply(`Enviar comando *${data.prefix}play [ link ]*\nEjemplo : ${data.prefix}play alone`)
-                data.reply(mess.wait)
-                res = await axios.get(`${apiUrl}/api/ytplaymp3/2?apikey=${ZeksKey}&q=${data.body}`)
-                if(res.data.status == false) data.reply(res.data.message)
-                ytm = res.data.result
-                teks = `*⌈ Canción Encontrada ✅ ⌉*\n\n*Título* : ${ytm.title}\n*Tamaño* : ${ytm.size}\n*Calidad* : ${ytm.quality}\n*Ext* : ${ytm.ext}\n*Fuente* : ${ytm.source}\n\n_Espere a que se envíe el archivo multimedia; puede tardar unos minutos_`
-                if(Number(ytm.size.split(' MB')[0]) >= 50.00) return Client.sendFileFromUrl(data.from, `${ytm.thumb}`, 'thumb.jpg', `*Datos recuperados correctamente!*\n\n*Title* : ${ytm.title}\n*Ukuran* : ${ytm.size}\n*Kualitas* : ${ytm.quality}\n*Ext* : mp3\n*Source* : ${ytm.source}\n*Link* : ${ytm.link}\n\n_Para la duración de más del límite se presenta en forma de enlace_`, data.message)
-                Client.sendFileFromUrl(data.from, ytm.thumb, 'thumb.jpg', teks, data.message)
-                Client.sendFileFromUrl(data.from, ytm.link, `${ytm.title} - Download.mp3`,)
-                   
-                                break
+                
                                 case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('Ya estas registrado 🧐')
