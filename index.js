@@ -178,7 +178,7 @@ const getLevelingId = (userId) => {
         }
 
 function addMetadata(packname, author) {	
-	if (!packname) packname = '𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎'; if (!author) author = 'Axel-bytu';	
+	if (!packname) packname = 'NenaBot'; if (!author) author = 'Axel-bytu';	
 	author = author.replace(/[^a-zA-Z0-9]/g, '');	
 	let name = `${author}_${packname}`
 	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
@@ -351,7 +351,7 @@ async function starts() {
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
                         /******Entrada ApiKey******/
-                        const BarBarKey = '27k8YvvqRRvjOt44L3PNgtpQzqf'
+                        const BarBarKey = 'BgWknoi0lb8EK41R0LvTvppmUpa'
                         const ApiXteamXyz = '07b550ff483327cb'
                         const ZeksKey =  'BgWknoi0lb8EK41R0LvTvppmUpa'
                         /******Fin de la entrada de ApiKey******/
@@ -416,7 +416,7 @@ async function starts() {
  
        /******ENTRADA FIN DE FUNCIONES******/
 			function addMetadata(packname, author) {	
-				if (!packname) packname = '𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎'; if (!author) author = 'Axel-bytu';	
+				if (!packname) packname = 'NenaBot'; if (!author) author = 'Axel-bytu';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
@@ -1530,7 +1530,7 @@ break
         const none = fs.readFileSync('./anishan/anime5.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	if (budy.startsWith(`Quien es tu sempai botsito`)) {
+	if (budy.startsWith(`Quien es tu sempai botsita`)) {
         const none = fs.readFileSync('./anishan/anime4.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
@@ -1538,7 +1538,7 @@ break
         const none = fs.readFileSync('./anishan/anime3.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	if (budy.startsWith(`Te amo botsito uwu`)) {
+	if (budy.startsWith(`Te amo botsita uwu`)) {
         const none = fs.readFileSync('./anishan/anime2.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
