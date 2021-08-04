@@ -100,7 +100,7 @@ Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu inte
 
 ## Patrosinio
 <p align="center">
-  <a href="https://github.com/Team-bytu"><img src="https://avatars.githubusercontent.com/u/87240647?s=60&v=4" height="30" width="25" /></a>
+  <a href="https://github.com/Team-bytu"><img src="https://avatars.githubusercontent.com/u/87240647?s=60&v=4" height="25" width="25" /></a>
   <img
         src="https://img.shields.io/badge/Teambytu%20-%2343853D.svg?&style=for-the-badge&logo=Teambytu&logoColor=white" />
 </p>
@@ -110,4 +110,4 @@ Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu inte
 
 
 
-
+ /*© 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎ 2021 GitHub, Inc*/
