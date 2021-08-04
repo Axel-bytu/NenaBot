@@ -1,4 +1,4 @@
-FROM Shanduy/ShanBot:latest
+FROM shanduy/shanBot:latest
 
 RUN git clone https://github.com/Axel-bytu/NenaBot /root/NenaBot
 WORKDIR /root/NenaBot/
