@@ -1526,6 +1526,12 @@ break
         if (budy.includes(`.nena chao`)) {
             reply(`chao baya con dios`)
               }
+        if (budy.includes(`.nena puta`)) {
+            reply(`si soy `)
+              }
+        if (budy.includes(`.nena funalo`)) {
+            reply(`ok cariño `)
+              }
         if (budy.startsWith(`La toca 7w7`)) {
         const none = fs.readFileSync('./anishan/anime5.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
