@@ -459,9 +459,7 @@ async function starts() {
 		case 'help':
 		case 'menu':   
                 client.sendMessage(from, help(prefix, sender), text, {quoted: mek})
-		const = fs.readFileSync('./anishan/menu.mp3');
-		client.sendMessage(from, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                break
+		break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
 		break
@@ -1534,6 +1532,10 @@ break
         if (budy.includes(`.nena funalo`)) {
             reply(`ok cariño `)
               }
+        if (budy.startsWith(`Nena`)) {
+        const none = fs.readFileSync('./anishan/menu.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
         if (budy.startsWith(`La toca 7w7`)) {
         const none = fs.readFileSync('./anishan/anime5.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
