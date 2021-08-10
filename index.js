@@ -459,8 +459,8 @@ async function starts() {
 		case 'help':
 		case 'menu':   
                 client.sendMessage(from, help(prefix, sender), text, {quoted: mek})
-		const none = fs.readFileSync('./anishan/menu.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+		const = fs.readFileSync('./anishan/menu.mp3');
+		client.sendMessage(from, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
