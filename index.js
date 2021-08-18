@@ -55,7 +55,7 @@ const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 
 /******INICIO DE LA ENTRADA DEL MENÚ******/
 const { help } = require('./src/help')
-const { logomaker } = require('./database/menu/logomaker')
+const { logomaker } = require('./src/logomaker')
 const { toinmenu } = require('./src/toinmenu')
 const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
@@ -491,8 +491,8 @@ async function starts() {
                 case 'welmenu':
 		client.sendMessage(from, welmenu(prefix, sender), text, {quoted: mek})
 		break
-                case 'logomenu':
-		client.sendMessage(from, logomenu(prefix, sender), text, {quoted: mek})
+                case 'logomaker':
+		client.sendMessage(from, logomaker(prefix, sender), text, {quoted: mek})
 		break
 					
                             case 'demote':
