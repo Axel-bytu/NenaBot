@@ -812,6 +812,22 @@ break
 		           }
 	           })
                   break
+case 'banchat':
+if (!itsMe) return reply('🤔')
+if (args.length < 1) return reply('*Amm... para activar usa *1* y para desactivar *0*')
+if (body.endsWith('1')) {
+if (isBanChat) return reply('Este chat ya ah estado baneado!')
+chatban.push(from)
+fs.writeFileSync('./src/ban.json', JSON.stringify(chatban))
+reply('*♻Este chat a sido baneado*')
+} else if (body.endsWith('0')) {
+chatban.splice(from)
+fs.writeFileSync('./src/ban.json', JSON.stringify(chatban))
+reply('*♻Este chat a dejado de ser baneado*')
+} else {
+reply(`Porfavor escriba bien el comando: ${prefix}banchat *0/1*`)
+}
+break
                                         case 'antilink':
                                         if (!isGroup) return reply(mess.only.group)
 					if (!isUser) return reply(mess.only.daftarB)
