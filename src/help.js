@@ -71,6 +71,7 @@ const help = (prefix) => {
 ╠ Nombra a todos los del grupo 
 ┠❥◉*NSWF* 
 ┠❥${prefix}nsfwmenu
+┠❥${prefix}doxing
 ╿
 ╰╼❥by ⚡ABT⚡
 
