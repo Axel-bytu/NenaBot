@@ -20,11 +20,12 @@ const help = (prefix) => {
 ┷┯◉*NUEVOS MENUS*
   ╽   
   ┠❥ ${prefix}juegos
+  ┠❥ ${prefix}logomenu
   ┠❥ ${prefix}desmenu
   ┠❥ ${prefix}version
   ┠❥ ${prefix}welmenu
   ┠❥ ${prefix}daftar y tu nombre
-  ┠❥${prefix}creador
+  ┠❥ ${prefix}creador
   ╠ Dudas o problemas aqui
   ╿
 ┯┷◉*CREAR STICKERS*
