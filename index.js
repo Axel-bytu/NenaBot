@@ -972,6 +972,49 @@ break
 						reply(`Envíe una imagen con el comando ${prefix}s o etiqueta a una imagen que ya se haya enviado`)
 					}
 					break
+//Fake Doxing By Broz
+
+case 'doxing':
+if (!isRegister) return reply(mess.only.usrReg)
+if (!isGroup) return reply(mess.only.group)
+f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
+reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
+
+*Nombre:* _${f.name}_
+*Genero:* _${f.gender}_
+*Edad:* _${f.age}_
+*Fecha de nacimiento:* _${f.birtday}_
+*Ocupacion:* _${f.occupation}_
+*Dirección:* _${f.address}_
+*Codigo postal:* _${f.zip_code}_
+*Estado:* _${f.state}_
+*Pais:* _${f.country}_
+
+=====================
+
+*E-Mail:* ${f.email}
+*Contraseña:* ${f.password}_
+*Telefono:* _${f.phone}_
+
+=====================
+
+*No. Tarjeta de credito:* ${f.card}
+*CVV:* _${f.code}_
+*Fecha de vencimiento:* _${f.date}_
+*PIN:* _${f.pin_code}_
+
+=====================
+
+*Peso:* _${f.weight}_
+*Estatura:* _${f.height}_
+*Tipo de sangre:* _${f.blood_type}_
+*Estado:* _${f.status}_
+
+=====================
+
+*FDx Bt 🔥Broz🔥*
+`)
+break
 		
 		//»»————-　★　————-««\\
 //˚ ༘✶ ⋆｡˚ ⁀➷  🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥
