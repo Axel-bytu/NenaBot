@@ -1,4 +1,4 @@
-const logomenu = (prefix, pushname) => {
+const logomaker = (prefix, pushname) => {
     return `
  comandos de logos 
  
@@ -26,4 +26,4 @@ by 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
 
 }
 
-exports.logomenu = logomenu
+exports.logomaker = logomaker
