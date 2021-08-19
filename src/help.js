@@ -20,7 +20,7 @@ const help = (prefix) => {
 ┷┯◉*NUEVOS MENUS*
   ╽   
   ┠❥ ${prefix}juegos
-  ┠❥ ${prefix}logomenu
+  ┠❥ ${prefix}logomaker
   ┠❥ ${prefix}desmenu
   ┠❥ ${prefix}version
   ┠❥ ${prefix}welmenu
