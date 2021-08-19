@@ -338,15 +338,18 @@ async function starts() {
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
+                        const senderNumber = sender.split("@")[0]
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const isAntiLink = isGroup ? antilink.includes(from) : false
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+			const itsMe = senderNumber == botNumber
+                        const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
+                        const isRegister = checkRegisteredUser(sender)
                         const isNsfw = isGroup ? nsfw.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
