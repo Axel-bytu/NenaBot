@@ -15,6 +15,8 @@ const {
     MessageType,
     Presence,
     Mimetype,
+    MessageOptions,
+    WALocationMessage,
     rugaapi,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
