@@ -346,7 +346,7 @@ async function starts() {
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const isMess = mess.only.logomaker(from) :false
+			const isMess = mess.only.logomaker(from) : false
                         const itsMe = senderNumber == botNumber
                         const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
