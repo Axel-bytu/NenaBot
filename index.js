@@ -1062,9 +1062,9 @@ sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 
 break
 		
 case 'flores':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
-logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
+if (!sender) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${sender}!*`)		
+logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${sender}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
