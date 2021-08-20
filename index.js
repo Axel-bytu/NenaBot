@@ -338,6 +338,7 @@ async function starts() {
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
+                        const !q = isGroup ? mek.participant : userText : ''
                         const senderNumber = sender.split("@")[0]
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
@@ -1062,9 +1063,9 @@ sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 
 break
 		
 case 'flores':
-if (!sender) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${sender}!*`)		
-logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${sender}`
+if (!q) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
