@@ -339,8 +339,7 @@ async function starts() {
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
                         const q = isGroup ? User.tenses(text) 
-                        const senderNumber = sender.split("@")[0]
-			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
+                        const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const isAntiLink = isGroup ? antilink.includes(from) : false
                         const groupId = isGroup ? groupMetadata.jid : ''
