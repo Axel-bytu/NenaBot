@@ -21,7 +21,7 @@
 
 
 # 𝐍𝐄𝐍𝐀𝐁𝐎𝐓
-ULTIMA VERSION 1.0
+ULTIMA VERSION 4.0
 
 
 ## Como Actualizar Tu Bot 🔄
