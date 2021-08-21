@@ -334,20 +334,21 @@ async function starts() {
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
 			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
-			const nomorOwner = [ownerNumber]
+		        const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
-                        const q = isGroup ? User.tenses(text) 
+			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
+			const isBanned = ban.includes(sender)
+			const groupName = isGroup ? groupMetadata.subject : ''
+			const isAntiLink = isGroup ? antilink.includes(from) : false
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const isMess = mess.only.logomaker(from)
-                        const itsMe = senderNumber == botNumber
-                        const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
-                        const isNsfw = isGroup ? nsfw.includes(from) : false
+			const isNsfw = isGroup ? nsfw.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
                         const isBanChat = chatban.includes(from)
@@ -357,8 +358,6 @@ async function starts() {
                         const NomerOwner = '593998840594@s.whatsapp.net'
                         /******Entrada ApiKey******/
                         const BarBarKey = 'BgWknoi0lb8EK41R0LvTvppmUpa'
-                        const ApiXteamXyz = '07b550ff483327cb'
-                        const ZeksKey =  'BgWknoi0lb8EK41R0LvTvppmUpa'
                         /******Fin de la entrada de ApiKey******/
 
 			const isUrl = (url) => {
