@@ -260,7 +260,7 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Mi trolo @${num.split('@')[0]}\nTodo bien NEFASTO!!!! Bienvenido a *${mdata.subject}* el mejor grupo una locura 👉😎👈\n\nUn gusto conocerte men 😀\n\nOjito sigue las reglas del grupo si no, pa fuera mi loco los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
+				teks = `Hola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -687,17 +687,17 @@ break
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
 					break
 				case 'ytmp4':
-					if (args.length < 1) return reply('Donde esta la URL?')
-					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-					reply(mess.only.mpv)
-					anu = await fetchJson(`https://api-broz.herokuapp.com/api/ytv?url=https://youtu.be/6l5V3BWDcMw=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
-					thumb = await getBuffer(anu.thumb)
-					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
-					break
+		                        if (args.length < 1) return reply('Donde esta la URL?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxx')
+		                        if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
+		                        reply(mess.only.mpv)
+		                        anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/ytmp4?url=${args[0]}`, {method: 'get'})
+		                        if (anu.error) return reply(anu.error)
+		                        teks = `*⌈ Video Encontrado ✅ ⌉*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
+		                        thumb = await getBuffer(anu.thumb)
+		                        client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
+		                        buffer = await getBuffer(anu.result)
+		                        client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
+		                        break	
 			        case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
@@ -732,13 +732,7 @@ break
 					}
 					mentions(teks, groupAdmins, true)
 					break
-			/*case 'setprefix':
-					client.updatePresence(from, Presence.composing) 
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					prefix = args[0]
-					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
-					break*/
+			
 			case 'todos':
 			case 'tagall':
 				client.updatePresence(from, Presence.composing) 
@@ -851,7 +845,7 @@ break
 	           })
                   break
 case 'banchat':
-if (!itsMe) return reply('🤔')
+if (!isGroup) return reply('🤔')
 if (args.length < 1) return reply('*Amm... para activar usa *1* y para desactivar *0*')
 if (body.endsWith('1')) {
 if (isBanChat) return reply('Este chat ya ah estado baneado!')
@@ -936,9 +930,8 @@ break
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
 						break
 				case 's':
-				case 'BT':
-				case 'Shan':
-                                case 'nefasto':
+				case 'abt':
+                                case 'broz':
 				case 'stiker':
 				case 'sticker':
 				case 'stickergif':
@@ -1013,7 +1006,7 @@ break
 //Fake Doxing By Broz
 
 case 'doxing':
-if (!isRegister) return reply(mess.only.usrReg)
+if (!isReg) return reply(mess.only.sender)
 if (!isGroup) return reply(mess.only.group)
 f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
@@ -1058,122 +1051,136 @@ break
 //˚ ༘✶ ⋆｡˚ ⁀➷  🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥
 		
 case 'neon':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB) 
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'matrix':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB) 
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break		
 		
 case 'break':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB) 
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break		
 		
 case 'dropwater':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
-case 'lobo':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
-logo = `https://api.zeks.xyz/api/wolflogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
-break
-		
 case 'flores':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'cross':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'seda':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'fire':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'glow':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'smoke':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
-case 'pubg':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO:* ${prefix + command} *texto1|texto2*\n\n_Separa el texto 1 del texto 2 con el simbolo "|"_`)
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${texto1 + texto2}!*`)		
-logo = `https://api.zeks.xyz/api/pubglogo?apikey=apivinz&text1=${texto1}&text2=${texto2}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
-break
-		
 case 'cielo':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 	
 case 'cs':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'ligth':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'navidad':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'nieve':
-if (!q) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+if (!isUser) return reply(mess.only.daftarB)  
+if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
+reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
