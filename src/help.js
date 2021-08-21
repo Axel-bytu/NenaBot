@@ -14,8 +14,10 @@ const help = (prefix) => {
 ┠❥◉*NUEVOS COMANDOS*
 ┠❥ ${prefix}antimenu
 ╠Su nombre lo dice todo (antilink)
-┠❥ ${prefix}otak
-╠Monas chinas
+┠❥◉*BANER*
+┠❥ ${prefix}ban
+┠❥ ${prefix}desban
+╠Baneo a los que crean spam
 ╿
 ┷┯◉*NUEVOS MENUS*
   ╽   
@@ -47,6 +49,8 @@ const help = (prefix) => {
   ┠❥ ${prefix}tts es (mas texto)
   ┠❥◉*DIVERSIÓN*
   ┠❥ ${prefix}nena (mas texto) 
+  ┠❥ ${prefix}otak
+  ╠Monas chinas
   ┠❥◉*OTROS*
   ┠❥ ${prefix}wame
   ╠ Link de Whatsapp
@@ -73,7 +77,7 @@ const help = (prefix) => {
 ┠❥${prefix}nsfwmenu
 ┠❥${prefix}doxing
 ╿
-╰╼❥by ⚡ABT⚡
+╰╼❥by 🌀𝐁𝐫𝐨𝐳
 
 
 `
