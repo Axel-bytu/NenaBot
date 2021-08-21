@@ -49,6 +49,7 @@ const speed = require('performance-now')
 /******COMIENZO DE LA ENTRADA JSON******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
+const ban = JSON.parse(fs.readFileSync('./database/banned.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
@@ -538,6 +539,40 @@ async function starts() {
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
+
+//FUNCIONES DE BAN Y DESBAN			
+			
+case 'ban':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return 
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+pru = '*\n'
+for (let _ of mentioned) {
+pru += `@${_.split('@')[0]}\n`
+}
+ban.push(`${mentioned}`)
+fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
+susp = `『 BANEADO 🚫 』\n\n◉Nombre: @${mentioned[0].split('@')[0]}\n◉Razon: Spam\n\n*Usted a sido baneado del uso del bot, no podra usar el bot hasta nuevo aviso*`
+mentions(`${susp}`, mentioned, true)   
+break
+
+case 'desban':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return 
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+pru = '*\n'
+for (let _ of mentioned) {
+pru += `@${_.split('@')[0]}\n`
+}
+ban.splice(`${mentioned}`)
+fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
+susp = `『 DESBANEADO ✅ 』\n\n◉Nombre: @${mentioned[0].split('@')[0]}\n\n*Se te a retirado el BAN ya puedes usar el bot*`
+mentions(`${susp}`, mentioned, true)   
+break		
 
 /******JUEGOS SHANDUY LA PUTA MADRE NO TE OLVIDES******/
 					
