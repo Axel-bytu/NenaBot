@@ -1089,7 +1089,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, MessageType.sticker, {quoted: mek})
 break
 		
 case 'matrix':
@@ -1098,7 +1098,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break		
 		
 case 'break':
@@ -1107,7 +1107,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break		
 		
 case 'dropwater':
@@ -1116,7 +1116,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'flores':
@@ -1125,7 +1125,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'cross':
@@ -1134,7 +1134,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'seda':
@@ -1143,7 +1143,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'fire':
@@ -1152,7 +1152,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'glow':
@@ -1161,7 +1161,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'smoke':
@@ -1170,7 +1170,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'cielo':
@@ -1179,7 +1179,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 	
 case 'cs':
@@ -1188,7 +1188,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'ligth':
@@ -1197,7 +1197,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break	
 		
 case 'navidad':
@@ -1206,7 +1206,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'nieve':
@@ -1215,7 +1215,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
                                    
                                    case 'toimg':
