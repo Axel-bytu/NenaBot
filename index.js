@@ -397,7 +397,14 @@ async function starts() {
 	})
 	})
 	}
-           //FUNCION ANTILINK
+const fimg = {
+key:
+{ fromMe: false,
+participant: `0@s.whatsapp.net`, ...(from ?
+{ remoteJid: "status@broadcast" } : {}) },
+message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail'}}
+}          
+               //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
 		if (!isAntiLink) return
