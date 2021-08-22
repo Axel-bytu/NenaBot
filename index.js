@@ -402,7 +402,7 @@ key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
-message: { "imageMessage" }
+message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/help.jpg')}}
 }          
                //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
