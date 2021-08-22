@@ -1,7 +1,7 @@
 # NenaBot Bot Para Whatsapp 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Axel-bytu/NenaBot/main/prohibido/nenabot.jpg" width="500" height="281"/>
+<img src="https://raw.githubusercontent.com/Axel-bytu/NenaBot/main/prohibido/nenabot.jpg" width="281" height="281"/>
 </p>
 <p align="center">
 <a href="#"><img title="NenaBot" src="https://img.shields.io/badge/NenaBot -purple?colorA=%cc33ff&colorB=%cc33ff&style=for-the-badge"></a>
