@@ -328,7 +328,7 @@ async function starts() {
 					insta: 'Espera🥰\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					musica: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					musica2: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`,
+					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋☹️🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -354,6 +354,7 @@ async function starts() {
 			const isOwner = ownerNumber.includes(sender)
                         const isBanChat = chatban.includes(from)
 	                if (isBanChat && !isOwner) return
+                        const q = args.join(' ')
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
@@ -1006,7 +1007,7 @@ break
 //Fake Doxing By Broz
 
 case 'doxing':
-if (!isReg) return reply(mess.only.sender)
+if (!isUser) return reply(mess.only.sender)
 if (!isGroup) return reply(mess.only.group)
 f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
