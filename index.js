@@ -279,7 +279,16 @@ async function starts() {
 	    }
 	})
 
-	client.on('chat-update', async (mek) => {
+                 client.on('CB:action,,battery', json => {
+                 global.batteryLevelStr = json[2][0][1].value
+                 global.batterylevel = parseInt(batteryLevelStr)
+                 baterai = batterylevel
+                 if (json[2][0][1].live == 'true') charging = true
+                 if (json[2][0][1].live == 'false') charging = false
+                 console.log(chalk.greenBright("├"), chalk.keyword("magenta")("[ 🔋Nivel de carga de la bateria ]"), chalk.greenBright(batterylevel+'%'), chalk.keyword("cyan")("Esta cargando?"), chalk.keyword("yellow")(charging))	
+         })
+	
+      client.on('chat-update', async (mek) => {
 		try {
                         if (!mek.hasNewMessage) return
                         mek = JSON.parse(JSON.stringify(mek)).messages[0]
@@ -374,6 +383,19 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
+	const sendFileFromUrl = async(link, type, options) => {
+  	hasil = await getBuffer(link)
+	client.sendMessage(from, hasil, type, options).catch(e => {
+	fetch(link).then((hasil) => {
+	client.sendMessage(from, hasil, type, options).catch(e => {
+	client.sendMessage(from, { url : link }, type, options).catch(e => {
+	  reply('_[ ! ] Error al descargar el archivo_')
+	  console.log(e)
+	})
+	})
+	})
+	})
+	}
            //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
