@@ -44,6 +44,7 @@ const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
+const chalk = require('chalk')
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
