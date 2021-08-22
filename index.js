@@ -325,7 +325,8 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando es solo para grupos',
 					ownerG: '[❗] Este comando solo puede ser utilizado por un admin del grupo',
-					ownerB: '[❗] Este comando solo lo usa 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
+					ownerA: '[❗] Este comando solo lo usa el Creador 𝐁𝐫𝐨𝐳ꨄ︎',
+                                        ownerB: '[❗] Este comando solo lo usa 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
                                         logo: '[❗] Error al descargar el archivo',
@@ -369,6 +370,9 @@ async function starts() {
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
+                        const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
+                        const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+			                       
                         /******Entrada ApiKey******/
                         const BarBarKey = 'BgWknoi0lb8EK41R0LvTvppmUpa'
                         /******Fin de la entrada de ApiKey******/
@@ -397,14 +401,14 @@ async function starts() {
 	})
 	})
 	})
-	}*/
+	}
 const fimg = {
 key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
 message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}
-}          
+}*/          
                //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
@@ -449,7 +453,11 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
-			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+                        if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+        if (isCmd && isBanned) {
+        return console.log(color('[ USUÁRIO BANEADO ] Ignorando Comando', 'blue'), color(moment.tz('America/Guayaquil').format('HH:mm:ss'), 'yellow'), color(`${command}`),'DE:', color(pushname))}
+    	if (!isGroup && isCmd) console.log('\x1b[1;37m>', '[ \x1b[1;36mMensaje\x1b[1;37m ]', time, color(command), 'De', color(sender.split('@')[0]))
+        if (isCmd && isGroup) console.log('\x1b[1;37m>', '[ \x1b[1;36mMensaje\x1b[1;37m ]', time, color(command), 'De', color(sender.split('@')[0]), 'En', color(groupName))
  
        /******ENTRADA FIN DE FUNCIONES******/
 			function addMetadata(packname, author) {	
@@ -878,7 +886,7 @@ break
                   break
 case 'banchat':
 if (!isGroup) return reply('🤔')
-if (!jid) return reply(mess.only.ownerB)
+if (!isUser) return reply(mess.only.ownerB)
 if (args.length < 1) return reply('*Amm... para activar usa *1* y para desactivar *0*')
 if (body.endsWith('1')) {
 if (isBanChat) return reply('Este chat ya ah estado baneado!')
@@ -963,7 +971,6 @@ break
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
 						break
 				case 's':
-				case 'abt':
                                 case 'broz':
 				case 'stiker':
 				case 'sticker':
@@ -1039,7 +1046,7 @@ break
 //Fake Doxing By Broz
 
 case 'doxing':
-if (!isUser) return reply(mess.only.sender)
+if (NumerOwner) return reply(mess.only.ownerA)
 if (!isGroup) return reply(mess.only.group)
 f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
@@ -1087,135 +1094,135 @@ case 'neon':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, MessageType.sticker, {quoted: mek})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 		
 case 'matrix':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break		
 		
 case 'break':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break		
 		
 case 'dropwater':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break	
 		
 case 'flores':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break	
 		
 case 'cross':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 		
 case 'seda':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 		
 case 'fire':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 		
 case 'glow':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 		
 case 'smoke':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
-break	
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
+break
 		
 case 'cielo':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 	
 case 'cs':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
-break	
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
+break
 		
 case 'ligth':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
-break	
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
+break
 		
 case 'navidad':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
 		
 case 'nieve':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+reply(mess.only.logo)
 break
                                    
                                    case 'toimg':
