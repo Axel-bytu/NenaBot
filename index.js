@@ -385,7 +385,7 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
-      */const sendFileFromUrl = async(link, type, options) => {
+      /*const sendFileFromUrl = async(link, type, options) => {
   	hasil = await getBuffer(link)
 	client.sendMessage(from, hasil, type, options).catch(e => {
 	fetch(link).then((hasil) => {
@@ -397,7 +397,7 @@ async function starts() {
 	})
 	})
 	})
-	}/*
+	}*/
 const fimg = {
 key:
 { fromMe: false,
