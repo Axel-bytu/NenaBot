@@ -328,6 +328,7 @@ async function starts() {
 					ownerB: '[❗] Este comando solo lo usa 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
+                                        logo: '[❗] Error al descargar el archivo',
                                         pegatina: 'Calma crack estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos❗*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Esto puede demorar unos minutos*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
@@ -384,7 +385,7 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
-	const sendFileFromUrl = async(link, type, options) => {
+      */const sendFileFromUrl = async(link, type, options) => {
   	hasil = await getBuffer(link)
 	client.sendMessage(from, hasil, type, options).catch(e => {
 	fetch(link).then((hasil) => {
@@ -396,7 +397,7 @@ async function starts() {
 	})
 	})
 	})
-	}
+	}/*
 const fimg = {
 key:
 { fromMe: false,
@@ -1088,7 +1089,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 reply(mess.only.logo)
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 𝘛𝘉 🔥*', sendEphemeral: true})
 break
 		
 case 'matrix':
