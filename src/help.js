@@ -5,8 +5,8 @@ const help = (prefix) => {
 ╿
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${pusname}
-  ┠❥ Fecha: ${data}
+  ┠❥ Hola: ${pushname}
+  ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
   ┠❥ Creador: Axel™ 
