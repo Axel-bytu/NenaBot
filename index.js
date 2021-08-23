@@ -345,20 +345,22 @@ async function starts() {
 			}
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
-			const botNumber = client.user.jid
+			const botNumber = client.user.jid.split("@")[0]
 			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
 		        const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
-			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
+			const senderNumber = sender.split("@")[0]
+                        const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const isBanned = ban.includes(sender)
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const isAntiLink = isGroup ? antilink.includes(from) : false
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+			const itsMe = senderNumber == botNumber
+                        const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : false
@@ -367,13 +369,20 @@ async function starts() {
                         const isBanChat = chatban.includes(from)
 	                if (isBanChat && !isOwner) return
                         const q = args.join(' ')
-                        const bot = botNumber(@s.whatsapp.net)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
                         const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
-			                       
+       
+const mentionByTag = type == "extendedTextMessage" && sam.message.extendedTextMessage.contextInfo != null ? sam.message.extendedTextMessage.contextInfo.mentionedJid : []
+const mentionByReply = type == "extendedTextMessage" && sam.message.extendedTextMessage.contextInfo != null ? sam.message.extendedTextMessage.contextInfo.participant || "" : ""
+const mention = typeof(mentionByTag) == 'string' ? [mentionByTag] : mentionByTag
+mention != undefined ? mention.push(mentionByReply) : []
+const mentionUser = mention != undefined ? mention.filter(n => n) : []
+const mentions = (teks, memberr, id) => {
+(id == null || id == undefined || id == false) ? samu330.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : samu330.sendMessage(from, teks.trim(), extendedText, {quoted: sam, contextInfo: {"mentionedJid": memberr}})
+}                       
                         /******Entrada ApiKey******/
                         const BarBarKey = 'BgWknoi0lb8EK41R0LvTvppmUpa'
                         /******Fin de la entrada de ApiKey******/
@@ -887,7 +896,7 @@ break
                   break
 case 'banchat':
 if (!isGroup) return reply('🤔')
-if (bot) return reply(mess.only.ownerB)
+if (!itsMe) return reply(mess.only.ownerB)
 if (args.length < 1) return reply('*Amm... para activar usa *1* y para desactivar *0*')
 if (body.endsWith('1')) {
 if (isBanChat) return reply('Este chat ya ah estado baneado!')
@@ -1047,8 +1056,9 @@ break
 //Fake Doxing By Broz
 
 case 'doxing':
-if (NumerOwner) return reply(mess.only.ownerA)
+if (!isOwner) return reply(mess.only.ownerA)
 if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply('*Etiqueta un participante o algun mensaje*')
 f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
 
