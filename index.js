@@ -367,6 +367,7 @@ async function starts() {
                         const isBanChat = chatban.includes(from)
 	                if (isBanChat && !isOwner) return
                         const q = args.join(' ')
+                        const bot = botNumber(@s.whatsapp.net)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
@@ -886,7 +887,7 @@ break
                   break
 case 'banchat':
 if (!isGroup) return reply('🤔')
-if (!const) return reply(mess.only.ownerB)
+if (bot) return reply(mess.only.ownerB)
 if (args.length < 1) return reply('*Amm... para activar usa *1* y para desactivar *0*')
 if (body.endsWith('1')) {
 if (isBanChat) return reply('Este chat ya ah estado baneado!')
