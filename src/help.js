@@ -1,10 +1,13 @@
 const help = (prefix) => {
 	return `
 
-┏ ❣*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐀𝐁𝐓*❣
+┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
 ╿
 ┷┯*INFORMACION*
   ╽
+  ┠❥ Hola: ${pusname}
+  ┠❥ Fecha: ${data}
+  ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
   ┠❥ Creador: Axel™ 
   ┠❥ Instagran: Axel_bytu
