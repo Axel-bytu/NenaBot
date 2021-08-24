@@ -511,8 +511,11 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':   
-                client.sendMessage(from, help(prefix, sender), text, {quoted: mek})
-		break
+                client.sendMessage(from, help(prefix, pushname, time, date, sender), text, {quoted: mek})
+		/*const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+                const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
+                const date = moment.tz('America/Guayaquil').format('DD/MM/YY')*/
+                break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
 		break
