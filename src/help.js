@@ -5,7 +5,7 @@ const help = (prefix) => {
 ╿
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${mentioned}
+  ┠❥ Hola: ${mention}
   ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
