@@ -1,8 +1,8 @@
-const help = (prefix, imagen/jpg, pushname, date, time) => {
+const help = (prefix, MensajeType.jpg, pushname, date, time) => {
       return `
 
 ┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
-╿${imagen/jpg}
+╿${MensajeType.jpg}
 ┷┯*INFORMACION*
   ╽
   ┠❥ Hola: ${pushname}
