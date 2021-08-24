@@ -1,10 +1,14 @@
 const help = (prefix) => {
-	return `
+const mentionUser = mention != undefined ? mention.filter(n => n) : []
+const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
+const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
+      return `
 
 ┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
 ╿
 ┷┯*INFORMACION*
   ╽
+  ┠❥ Hola: ${mentionUser}
   ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
