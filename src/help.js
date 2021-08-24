@@ -4,7 +4,8 @@ client.on('chat-update', async (mek) => {
 			if (mek.key.fromMe) return
 			global.prefix
 			global.blocked
-                     }
+             }
+         }
 const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
 const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
