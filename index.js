@@ -380,9 +380,7 @@ const mentionByReply = type == "extendedTextMessage" && mek.message.extendedText
 const mention = typeof(mentionByTag) == 'string' ? [mentionByTag] : mentionByTag
 mention != undefined ? mention.push(mentionByReply) : []
 const mentionUser = mention != undefined ? mention.filter(n => n) : []
-const mentions = (teks, memberr, id) => {
-(id == null || id == undefined || id == false) ? samu330.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : samu330.sendMessage(from, teks.trim(), extendedText, {quoted: sam, contextInfo: {"mentionedJid": memberr}})
-}                       
+                       
                         /******Entrada ApiKey******/
                         const BarBarKey = 'BgWknoi0lb8EK41R0LvTvppmUpa'
                         /******Fin de la entrada de ApiKey******/
