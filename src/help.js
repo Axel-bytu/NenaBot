@@ -1,5 +1,5 @@
 const help = (prefix) => {
-const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+const pushname = client.user.name : conts.notify || conts.vname || conts.name || '-'
 	return `
 
 ┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
