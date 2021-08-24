@@ -510,7 +510,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':   
-                const fimg = fs.readFileSync('.src/nenabot.jpg');
+                const fimg = fs.readFileSync('./src/nenabot.jpg');
 		client.sendMessage(from, fimg, MessageType.jpg, {quoted: mek, mimetype: 'image/jpeg', ptt:true})                
                 client.sendMessage(from, help(prefix, pushname, time, date, sender), text, {quoted: mek})
                 break
