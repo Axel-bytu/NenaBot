@@ -3,16 +3,16 @@ const fimg = fs.readFileSync('./src/nenabot.jpg');
 const help = (prefix, jpg, pushname, date, time) => {
       return `
 
-┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
+┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
 ╿${jpg}
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${pushname}
-  ┠❥ Fecha: ${date}
-  ┠❥ Hora: ${time}
-  ┠❥ Comando: ⌜ ${prefix} ⌟
-  ┠❥ Creador: Axel™ 
-  ┠❥ Instagran: Axel_bytu
+  ┠❥ Hola😊: ${pushname}
+  ┠❥ Fecha📆: ${date}
+  ┠❥ Hora⌚: ${time}
+  ┠❥ Comando📋: ⌜ ${prefix} ⌟
+  ┠❥ Creador🔐: Axel™ 
+  ┠❥ Instagran📧: Axel_bytu
   ╿
 ┯┷
 ╽
