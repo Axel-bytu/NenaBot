@@ -1,4 +1,4 @@
-const help = (prefix),(pushname),(date),(time) => {
+const help = (prefix, pushname, date, time) => {
       return `
 
 ┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
