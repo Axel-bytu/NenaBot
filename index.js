@@ -510,8 +510,9 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':   
-		client.sendMessage(from, fimg, MessageType.jpg, {quoted: mek, mimetype: 'image/jpg', ptt:true})                
-                client.sendMessage(from, help(prefix, fs, pushname, date, time, sender), text, {quoted: mek})
+		const fimg = fs.readFileSync('./src/nenabot.jpg');
+                client.sendMessage(from, fimg, image, {mimetype: 'image/jpg', quoted: mek})                
+                client.sendMessage(from, help(prefix, image, pushname, date, time, sender), text, {quoted: mek})
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
@@ -1104,7 +1105,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1113,7 +1114,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break		
 		
@@ -1122,7 +1123,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break		
 		
@@ -1131,7 +1132,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break	
 		
@@ -1140,7 +1141,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break	
 		
@@ -1149,7 +1150,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1158,7 +1159,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1167,7 +1168,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1176,7 +1177,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1185,7 +1186,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1194,7 +1195,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 	
@@ -1203,7 +1204,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1212,7 +1213,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1221,7 +1222,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
 		
@@ -1230,7 +1231,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
-client.sendMessage(from, logo, image, MessageType.logo, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: mek})
 reply(mess.only.logo)
 break
                                    
