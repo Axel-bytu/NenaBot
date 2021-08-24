@@ -511,7 +511,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 		case 'help':
 		case 'menu':   
 		client.sendMessage(from, fimg, MessageType.jpg, {quoted: mek, mimetype: 'image/jpg', ptt:true})                
-                client.sendMessage(from, help(prefix, fimg, pushname, date, time, sender), text, {quoted: mek})
+                client.sendMessage(from, help(prefix, fs, pushname, date, time, sender), text, {quoted: mek})
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
