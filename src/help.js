@@ -1,11 +1,12 @@
 const help = (prefix) => {
+const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 	return `
 
 ┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
 ╿
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${mention}
+  ┠❥ Hola: ${pushname}
   ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
