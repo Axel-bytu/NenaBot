@@ -1,12 +1,10 @@
 const help = (prefix) => {
-const pushname = client.user.name 
 	return `
 
 ┏ ❥︎*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❦︎
 ╿
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${pushname}
   ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
