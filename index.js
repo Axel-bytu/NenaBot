@@ -374,12 +374,11 @@ async function starts() {
                         const NomerOwner = '593998840594@s.whatsapp.net'
                         const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
-       
-const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
-const mentionByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
-const mention = typeof(mentionByTag) == 'string' ? [mentionByTag] : mentionByTag
-mention != undefined ? mention.push(mentionByReply) : []
-const mentionUser = mention != undefined ? mention.filter(n => n) : []
+                        const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
+                        const mentionByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
+                        const mention = typeof(mentionByTag) == 'string' ? [mentionByTag] : mentionByTag
+                        mention != undefined ? mention.push(mentionByReply) : []
+                        const mentionUser = mention != undefined ? mention.filter(n => n) : []
                        
                         /******Entrada ApiKey******/
                         const BarBarKey = 'BgWknoi0lb8EK41R0LvTvppmUpa'
@@ -409,14 +408,14 @@ const mentionUser = mention != undefined ? mention.filter(n => n) : []
 	})
 	})
 	})
-	}
+	}*/
 const fimg = {
 key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
 message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}
-}*/          
+}         
                //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
@@ -511,10 +510,9 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':   
+                const fimg = fs.readFileSync('.src/nenabot.jpg');
+		client.sendMessage(from, fimg, MessageType.jpg, {quoted: mek, mimetype: 'image/jpeg', ptt:true})                
                 client.sendMessage(from, help(prefix, pushname, time, date, sender), text, {quoted: mek})
-		/*const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
-                const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
-                const date = moment.tz('America/Guayaquil').format('DD/MM/YY')*/
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
