@@ -5,7 +5,7 @@ const help = (prefix) => {
 ╿
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${pushname}
+  ┠❥ Hola: @${mentioned[0].split('@')[0]}
   ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
