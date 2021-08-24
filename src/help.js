@@ -1,4 +1,3 @@
-const fimg = fs.readFileSync('.src/nenabot.jpg');
 const help = (prefix, pushname, date, time) => {
       return `
 
