@@ -375,8 +375,8 @@ async function starts() {
                         const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
        
-const mentionByTag = type == "extendedTextMessage" && sam.message.extendedTextMessage.contextInfo != null ? sam.message.extendedTextMessage.contextInfo.mentionedJid : []
-const mentionByReply = type == "extendedTextMessage" && sam.message.extendedTextMessage.contextInfo != null ? sam.message.extendedTextMessage.contextInfo.participant || "" : ""
+const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
+const mentionByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
 const mention = typeof(mentionByTag) == 'string' ? [mentionByTag] : mentionByTag
 mention != undefined ? mention.push(mentionByReply) : []
 const mentionUser = mention != undefined ? mention.filter(n => n) : []
