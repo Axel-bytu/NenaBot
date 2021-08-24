@@ -1,5 +1,6 @@
 const help = (prefix) => {
-const mentionUser = mention != undefined ? mention.filter(n => n) : []
+if (mek.key.fromMe) return
+const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
 const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
       return `
@@ -8,7 +9,7 @@ const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
 ╿
 ┷┯*INFORMACION*
   ╽
-  ┠❥ Hola: ${mentionUser}
+  ┠❥ Hola: ${pushname}
   ┠❥ Fecha: ${date}
   ┠❥ Hora: ${time}
   ┠❥ Comando: ⌜ ${prefix} ⌟
