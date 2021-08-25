@@ -281,18 +281,6 @@ async function starts() {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
-        const createSerial = (size) => {
-        return crypto.randomBytes(size).toString('hex').slice(0, size)
-        }
-
-        const checkRegisteredUser = (sender) => {
-        let status = false
-        Object.keys(_registered).forEach((i) => {
-        if (_registered[i].id === sender) {
-        status = true
-        }
-        })
-            return status
                  
                  client.on('CB:action,,battery', json => {
                  global.batteryLevelStr = json[2][0][1].value
@@ -413,7 +401,9 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
-
+const createSerial = (size) => {
+return crypto.randomBytes(size).toString('hex').slice(0, size)
+}
 
 /*const fimg = {
 key:
