@@ -1293,8 +1293,6 @@ break
 					if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* ${prefix}reg *nombre|edad*`)
                                         const nombre = q.substring(0, q.indexOf('|') - 0)
                                         const edad = q.substring(q.lastIndexOf('|') + 1)
-                                        const serialUser = createSerial(20)
-                                        const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
                                         if(isNaN(edad)) return await reply('*La edad es un numero🙄*!!')
                                         if (nombre.length >= 10) return reply(`*Tu nombre es acaso un tren?*\nUn nombre no puede tener mas de *10* letras`)
                                         if (edad > 45) return reply(`Uuuu, yastas viejito:c\n*Lo siento pero no puedo registrarte si eres mayor de 45 años*`)
