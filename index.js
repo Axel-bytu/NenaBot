@@ -504,7 +504,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':                   
-                client.sendMessage(from, help(prefix, jpg, pushname, time, date, sender), text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑵𝒂𝒏𝒂𝑩𝒐𝒕\n❣️⃞🔥𝘼꯭𝙭͠𝙚꯭𝙡 𝙮  ꯭𝙁𝙚𝙧꯭𝙣𝙖꯭𝙣𝙙꯭𝙖🔥❣️" ,"jpegThumbnail": fs.readFileSync(`./src/nenabot.jpg`)}}}})
+                client.sendMessage(from, help(prefix, image, pushname, time, date, sender), text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑵𝒂𝒏𝒂𝑩𝒐𝒕\n❣️⃞🔥𝘼꯭𝙭͠𝙚꯭𝙡 𝙮  ꯭𝙁𝙚𝙧꯭𝙣𝙖꯭𝙣𝙙꯭𝙖🔥❣️" ,"jpegThumbnail": fs.readFileSync(`./src/nenabot.jpg`)}}}})
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
