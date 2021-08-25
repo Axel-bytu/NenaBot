@@ -46,7 +46,6 @@ const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
 const chalk = require('chalk')
-const crypto = require('crypto-js')
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
@@ -347,7 +346,6 @@ async function starts() {
 			}
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
-			const crypto = require('crypto')
                         const botNumber = client.user.jid.split("@")[0]
 			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
 		        const nomorOwner = [ownerNumber]
