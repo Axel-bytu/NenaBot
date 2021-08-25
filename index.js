@@ -1293,14 +1293,13 @@ break
 					if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* ${prefix}reg *nombre|edad*`)
                                         const nombre = q.substring(0, q.indexOf('|') - 0)
                                         const edad = q.substring(q.lastIndexOf('|') + 1)
-                                        const serialUser = createSerial(20)
                                         if(isNaN(edad)) return await reply('*La edad es un numero🙄*!!')
                                         if (nombre.length >= 10) return reply(`*Tu nombre es acaso un tren?*\nUn nombre no puede tener mas de *10* letras`)
                                         if (edad > 45) return reply(`Uuuu, yastas viejito:c\n*Lo siento pero no puedo registrarte si eres mayor de 45 años*`)
                                         if (edad < 13) return reply(`Eres menor de 13 años, no puedo hacer un registro tuyo lo siento.\n*Si quieres muestrame una autorizacion de tus padres diciendo que puedes pasar tiempo usando este bot para que pueda aceptarte:D*`)
                                                 user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `*「 SU REGISTRO FUE UN EXITO😉 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *📋Su registro fue todo un exito*\n\n*Para Continuar Usando a NenaBot Escriba el siguiente comando: ${prefix}help*\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `*「 SU REGISTRO FUE UN EXITO😉 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : Defec*\n\n *📋Su registro fue todo un exito*\n\n*Para Continuar Usando a NenaBot Escriba el siguiente comando: ${prefix}help*\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
 					
                      
                                      break
