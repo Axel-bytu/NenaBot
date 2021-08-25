@@ -1,10 +1,10 @@
 const fs = require('fs')
-const fromMe = fs.readFileSync('./src/nenabot.jpg');
-const help = (prefix, fromMe, pushname, time, date) => {
+const fimg = fs.readFileSync('./src/nenabot.jpg');
+const help = (prefix, fimg, pushname, time, date) => {
       return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
-╿${fs}
+╿${fimg}
 ┷┯*INFORMACION*
   ╽
   ┠❥ 😊Hola: ${pushname}
