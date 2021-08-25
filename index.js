@@ -515,8 +515,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			}
 			switch(command) {
 		case 'help':
-		case 'menu':                   
-                const fimg = fs.readFileSync('./src/nenabot.jpg')}
+		case 'menu':                
                 client.sendMessage(from, help(prefix, fimg, pushname, time, date, sender), text, {quoted: mek})
                 break
                 case 'otak':
