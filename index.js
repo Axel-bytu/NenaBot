@@ -403,12 +403,12 @@ const createSerial = (size) => {
 return crypto.randomBytes(size).toString('hex').slice(0, size)
 }
 
-/*const fimg = {
+const fimg = {
 key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
-message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}}*/         
+message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}}         
 
                //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
@@ -503,7 +503,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			}
 			switch(command) {
 		case 'help':
-		case 'menu':                
+		case 'menu':               
                 client.sendMessage(from, help(prefix, fimg, pushname, time, date, sender), text, {quoted: mek})
                 break
                 case 'otak':
