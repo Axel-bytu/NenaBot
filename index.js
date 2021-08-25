@@ -17,7 +17,7 @@ const {
     Mimetype,
     MessageOptions,
     WALocationMessage,
-    ReconnectMode
+    ReconnectMode,
     rugaapi,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
