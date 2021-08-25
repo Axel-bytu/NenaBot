@@ -4,7 +4,7 @@ const help = (prefix, fimg, pushname, time, date) => {
       return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
-╿${jpegThumbnail}
+╿image/jpg: ${fimg}
 ┷┯*INFORMACION*
   ╽
   ┠❥ 😊Hola: ${pushname}
@@ -31,13 +31,14 @@ const help = (prefix, fimg, pushname, time, date) => {
   ┠❥ ${prefix}desmenu
   ┠❥ ${prefix}version
   ┠❥ ${prefix}welmenu
-  ┠❥ ${prefix}daftar y tu nombre
+  ┠❥ ${prefix}reg y tu nombre|edad
   ┠❥ ${prefix}creador
   ╠ Dudas o problemas aqui
   ╿
 ┯┷◉*CREAR STICKERS*
 ╽  
 ┠❥ ${prefix}s
+┠❥ ${prefix}sticker
 ┠❥ ${prefix}attp
 ╠ Mas un texto corto
 ┠❥ ${prefix}stickergif
