@@ -8,7 +8,7 @@ const help = (prefix, jpg, pushname, date, time) => {
 ┷┯*INFORMACION*
   ╽
   ┠❥ Hola😊: ${pushname}
-  ┠❥ Fecha📆: ${date}
+  ┠❥ Fecha📅: ${date}
   ┠❥ Hora⌚: ${time}
   ┠❥ Comando📋: ⌜ ${prefix} ⌟
   ┠❥ Creador🔐: Axel™ 
