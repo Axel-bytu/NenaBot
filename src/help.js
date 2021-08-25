@@ -7,12 +7,12 @@ const help = (prefix, image, pushname, time, date) => {
 ╿${image}
 ┷┯*INFORMACION*
   ╽
-  ┠❥ 😊Hola: ${pushname}
-  ┠❥ ⌚Hora: ${time}
-  ┠❥ 📅Fecha: ${date}
-  ┠❥ 📋Comando: ⌜ ${prefix} ⌟
-  ┠❥ 🔐Creador: Axel™ 
-  ┠❥ 📧Instagran: Axel_bytu
+  ┠❥ Hola: ${pushname}
+  ┠❥ Hora: ${time}
+  ┠❥ Fecha: ${date}
+  ┠❥ Comando: ⌜ ${prefix} ⌟
+  ┠❥ Creador: Axel™ 
+  ┠❥ Instagran: Axel_bytu
   ╿
 ┯┷
 ╽
