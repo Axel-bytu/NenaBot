@@ -4,7 +4,7 @@ const help = (prefix, fimg, pushname, time, date) => {
       return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
-╿${imageMessage}
+╿${jpegThumbnail}
 ┷┯*INFORMACION*
   ╽
   ┠❥ 😊Hola: ${pushname}
