@@ -1,15 +1,15 @@
 const fs = require('fs')
 const fimg = fs.readFileSync('./src/nenabot.jpg');
-const help = (prefix, jpg, pushname, date, time) => {
+const help = (prefix, image, pushname, time, date) => {
       return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
-╿${jpg}
+╿${image}
 ┷┯*INFORMACION*
   ╽
   ┠❥ Hola😊: ${pushname}
-  ┠❥ Fecha📅: ${date}
   ┠❥ Hora⌚: ${time}
+  ┠❥ Fecha📅: ${date}
   ┠❥ Comando📋: ⌜ ${prefix} ⌟
   ┠❥ Creador🔐: Axel™ 
   ┠❥ Instagran📧: Axel_bytu
