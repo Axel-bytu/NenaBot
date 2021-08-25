@@ -17,6 +17,7 @@ const {
     Mimetype,
     MessageOptions,
     WALocationMessage,
+    ReconnectMode
     rugaapi,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
@@ -45,6 +46,7 @@ const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
 const chalk = require('chalk')
+const crypto = require("crypto-js")
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
@@ -369,6 +371,8 @@ async function starts() {
                         const isBanChat = chatban.includes(from)
 	                if (isBanChat && !isOwner) return
                         const q = args.join(' ')
+                        const texto1 = q.substring(0, q.indexOf('|') - 0)
+	                const texto2 = q.substring(q.lastIndexOf('|') + 1)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '593998840594@s.whatsapp.net'
@@ -396,19 +400,10 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
-      /*const sendFileFromUrl = async(link, type, options) => {
-  	hasil = await getBuffer(link)
-	client.sendMessage(from, hasil, type, options).catch(e => {
-	fetch(link).then((hasil) => {
-	client.sendMessage(from, hasil, type, options).catch(e => {
-	client.sendMessage(from, { url : link }, type, options).catch(e => {
-	  reply('_[ ! ] Error al descargar el archivo_')
-	  console.log(e)
-	})
-	})
-	})
-	})
-	}*/
+
+const createSerial = (size) => {
+return crypto.randomBytes(size).toString('hex').slice(0, size)
+}
 const fimg = {
 key:
 { fromMe: false,
@@ -509,10 +504,8 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			}
 			switch(command) {
 		case 'help':
-		case 'menu':   
-		const fimg = fs.readFileSync('./src/nenabot.jpg');
-                client.sendMessage(from, fimg, image, {mimetype: 'image/jpg', quoted: mek})                
-                client.sendMessage(from, help(prefix, image, pushname, date, time, sender), text, {quoted: mek})
+		case 'menu':                   
+                client.sendMessage(from, help(prefix, image, pushname, date, time, sender), text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑵𝒂𝒏𝒂𝑩𝒐𝒕\n❣️⃞🔥𝘼꯭𝙭͠𝙚꯭𝙡 𝙮  ꯭𝙁𝙚𝙧꯭𝙣𝙖꯭𝙣𝙙꯭𝙖🔥❣️" ,"jpegThumbnail": fs.readFileSync(`./src/nenabot.jpg`)}}}})
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
@@ -1105,7 +1098,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1114,7 +1107,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break		
 		
@@ -1123,7 +1116,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break		
 		
@@ -1132,7 +1125,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break	
 		
@@ -1141,7 +1134,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break	
 		
@@ -1150,7 +1143,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1159,7 +1152,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1168,7 +1161,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1177,7 +1170,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1186,7 +1179,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1195,7 +1188,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 	
@@ -1204,7 +1197,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1213,7 +1206,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1222,7 +1215,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1231,7 +1224,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
-client.sendMessage(from, logo, image, {quoted: mek})
+client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
                                    
@@ -1294,16 +1287,24 @@ break
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
                 
-                                case 'daftar':
+                                case 'reg':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('Ya estas registrado 🧐')
-					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar ⚡ABT⚡`)
-					var reg = body.slice(8)
-					var nombre = reg.split("|")[0];
+					if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* ${prefix}reg *nombre|edad*`)
+                                        const nombre = q.substring(0, q.indexOf('|') - 0)
+                                        const edad = q.substring(q.lastIndexOf('|') + 1)
+                                        const serialUser = createSerial(20)
+                                        const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
+                                        if(isNaN(edad)) return await reply('*La edad es un numero🙄*!!')
+                                        if (nombre.length >= 10) return reply(`*Tu nombre es acaso un tren?*\nUn nombre no puede tener mas de *10* letras`)
+                                        if (edad > 45) return reply(`Uuuu, yastas viejito:c\n*Lo siento pero no puedo registrarte si eres mayor de 45 años*`)
+                                        if (edad < 13) return reply(`Eres menor de 13 años, no puedo hacer un registro tuyo lo siento.\n*Si quieres muestrame una autorizacion de tus padres diciendo que puedes pasar tiempo usando este bot para que pueda aceptarte:D*`)
                                                 user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`DNI: Tucsardo 🥸\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
-					break
+						client.sendMessage(from, `*「 SU REGISTRO FUE UN EXITO😉 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *📋Su registro fue todo un exito*\n\n*Para Continuar Usando a NenaBot Escriba el siguiente comando: ${prefix}help*\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+					
+                     
+                                     break
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
