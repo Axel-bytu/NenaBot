@@ -1,7 +1,8 @@
 const fs = require('fs')
 const fimg = fs.readFileSync('./src/nenabot.jpg');
 const help = (prefix, fimg, pushname, time, date) => {
-      return `
+client.sendMessage(from, fimg, MessageType.image, {quoted: mek, mimetype: 'image/jpg', ptt:true})      
+       return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
 ╿image/jpg: ${fimg}
