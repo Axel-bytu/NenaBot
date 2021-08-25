@@ -46,7 +46,7 @@ const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
 const chalk = require('chalk')
-const crypto = require("crypto-js")
+const crypto = require('crypto-js')
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
