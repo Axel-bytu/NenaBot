@@ -420,8 +420,8 @@ key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
-message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}*/
-}         
+message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}}*/         
+
                //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
 		if (!isGroup) return
