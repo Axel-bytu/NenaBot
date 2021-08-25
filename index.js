@@ -46,6 +46,7 @@ const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
 const chalk = require('chalk')
+const crypto = require("crypto-js")
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
@@ -280,7 +281,19 @@ async function starts() {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
+        const createSerial = (size) => {
+        return crypto.randomBytes(size).toString('hex').slice(0, size)
+        }
 
+        const checkRegisteredUser = (sender) => {
+        let status = false
+        Object.keys(_registered).forEach((i) => {
+        if (_registered[i].id === sender) {
+        status = true
+        }
+        })
+            return status
+                 
                  client.on('CB:action,,battery', json => {
                  global.batteryLevelStr = json[2][0][1].value
                  global.batterylevel = parseInt(batteryLevelStr)
@@ -346,7 +359,8 @@ async function starts() {
 			}
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
-			const botNumber = client.user.jid.split("@")[0]
+			const crypto = require('crypto')
+                        const botNumber = client.user.jid.split("@")[0]
 			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
 		        const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
@@ -400,15 +414,13 @@ async function starts() {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
 
-const createSerial = (size) => {
-return crypto.randomBytes(size).toString('hex').slice(0, size)
-}
-const fimg = {
+
+/*const fimg = {
 key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
-message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}
+message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}*/
 }         
                //FUNCION ANTILINK
 	        if (budy.includes("://chat.whatsapp.com/")){
@@ -504,7 +516,8 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':                   
-                const fimg = { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}
+                const fimg = fs.readFileSync('./src/nenabot.jpg')}
+                client.sendMessage(from, fimg, MessageType.image, {quoted: mek, mimetype: 'image/jpg', ptt:true})
                 client.sendMessage(from, help(prefix, fimg, pushname, time, date, sender), text, {quoted: mek})
                 break
                 case 'otak':
@@ -872,7 +885,7 @@ break
 					} else {
 						mentions(`Pedido recibido, chao cariño 👋 : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupRemove(from, mentioned)
-					client.sendMessage(mentioned, 'Chao puta gorda', text)
+					client.sendMessage(mentioned, 'Chao gorda puta', text)
 					}
 					break
 				case 'exe':
@@ -1051,7 +1064,7 @@ case 'doxing':
 if (!isOwner) return reply(mess.only.ownerA)
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply('*Etiqueta un participante o algun mensaje*')
-f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
+f = await fetchJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
 
 *Nombre:* _${f.name}_
@@ -1098,7 +1111,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1107,7 +1120,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break		
 		
@@ -1116,7 +1129,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break		
 		
@@ -1125,7 +1138,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break	
 		
@@ -1134,7 +1147,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break	
 		
@@ -1143,7 +1156,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1152,7 +1165,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1161,7 +1174,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1170,7 +1183,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1179,7 +1192,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1188,7 +1201,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 	
@@ -1197,7 +1210,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1206,7 +1219,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1215,7 +1228,7 @@ if (!isUser) return reply(mess.only.daftarB)
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = `https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+client.sendMessage(from, logo, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
 reply(mess.only.logo)
 break
 		
@@ -1223,8 +1236,9 @@ case 'nieve':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = `https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`
-client.sendMessage(from, logo, image,  {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*', sendEphemeral: true})
+logo = await fetchJson(`https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`, {method: 'get'})
+buffer = await getBuffer(logo.result)
+client.sendMessage(from, buffer, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 reply(mess.only.logo)
 break
                                    
@@ -1293,13 +1307,14 @@ break
 					if (!q.includes('|')) return  reply(`*PORFAVOR ESCRIBE BIEN EL FORMATO DE REGISTRO:* ${prefix}reg *nombre|edad*`)
                                         const nombre = q.substring(0, q.indexOf('|') - 0)
                                         const edad = q.substring(q.lastIndexOf('|') + 1)
+                                        const serialUser = createSerial(20)
                                         if(isNaN(edad)) return await reply('*La edad es un numero🙄*!!')
                                         if (nombre.length >= 10) return reply(`*Tu nombre es acaso un tren?*\nUn nombre no puede tener mas de *10* letras`)
                                         if (edad > 45) return reply(`Uuuu, yastas viejito:c\n*Lo siento pero no puedo registrarte si eres mayor de 45 años*`)
                                         if (edad < 13) return reply(`Eres menor de 13 años, no puedo hacer un registro tuyo lo siento.\n*Si quieres muestrame una autorizacion de tus padres diciendo que puedes pasar tiempo usando este bot para que pueda aceptarte:D*`)
                                                 user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `*「 SU REGISTRO FUE UN EXITO😉 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦DNI: MALASO 🥸*\n\n *📋Su registro fue todo un exito*\n\n*Para Continuar Usando a NenaBot Escriba el siguiente comando: ${prefix}help*\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `*「 SU REGISTRO FUE UN EXITO😉 」*\n\n *◦ Nombre : ${nombre}*\n*◦ Numero : wa.me/${sender.split("@")[0]}*\n*◦ Edad : ${edad}*\n*◦ Hora De Registro : ${time}*\n*◦ SN : ${serialUser}*\n\n *📋Su registro fue todo un exito*\n\n*Para Continuar Usando a NenaBot Escriba el siguiente comando: ${prefix}help*\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
 					
                      
                                      break
