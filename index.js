@@ -1050,7 +1050,7 @@ case 'doxing':
 if (!isOwner) return reply(mess.only.ownerA)
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply('*Etiqueta un participante o algun mensaje*')
-f = await fetchJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
+f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
 
 *Nombre:* _${f.name}_
