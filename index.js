@@ -347,7 +347,7 @@ async function starts() {
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
                         const botNumber = client.user.jid.split("@")[0]
-			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["12484601392@s.whatsapp.net"] // replace this with your number
 		        const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -1096,7 +1096,7 @@ case 'neon':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
+logo = await fetchJson(`https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`)
 buffer = await getBuffer(logo.result)
 client.sendMessage(from, buffer, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
@@ -1166,7 +1166,7 @@ case 'fire':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
+logo =await fetchJson(`' `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
 buffer = await getBuffer(logo.result)
 client.sendMessage(from, buffer, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 reply(mess.only.logo)
@@ -1478,7 +1478,7 @@ break
 				case 'nsfwass':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`'https://meme-api.herokuapp.com/gimme/animebooty`, {method: 'get'})
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animebooty`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ese es el culo que querías?'})
 						} catch (e) {
