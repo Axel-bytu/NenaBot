@@ -1166,7 +1166,7 @@ case 'fire':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo =await fetchJson(`' `https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`
+logo =await fetchJson(`https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`)
 buffer = await getBuffer(logo.result)
 client.sendMessage(from, buffer, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 reply(mess.only.logo)
