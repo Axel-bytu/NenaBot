@@ -1,4 +1,4 @@
-const help = (prefix, fijpg, pushname, time, date) => {      
+const help = (prefix, imageMessage, pushname, time, date) => {      
        return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
