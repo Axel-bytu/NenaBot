@@ -403,7 +403,7 @@ const createSerial = (size) => {
 return crypto.randomBytes(size).toString('hex').slice(0, size)
 }
 
-const fimg = {
+const nena = {
 key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
@@ -504,7 +504,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':               
-                nena = fs.readFileSync('./src/nenabot.jpg')
+                const nena = fs.readFileSync('./src/nenabot.jpg')
                 client.sendMessage(from, help(prefix, nena, pushname, time, date, sender), text, {quoted: mek})
                 break
                 case 'otak':
