@@ -507,7 +507,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
                 var num = mek.participant
                 foto = fs.readFileSync('./src/nenabot.jpg')
                 const forder = { key : {fromMe: false,participant : "0@s.whatsapp.net", ...(from ? { remoteJid: "12484601392-1624232428@g.us" } : {})},message: {orderMessage: {itemCount : 999999999,status: 1,surface : 1,message: `🥀𝐁𝐫𝐨𝐳 | 𝑁𝑒𝑛𝑎𝑏𝑜𝑡🍒`,orderTitle: 'broz',sellerJid: `𝗡𝗲𝗻𝗮𝗕𝗼𝘁🌱`,thumbnail: fs.readFileSync('./src/nenabot.jpg')}}}
-                client.sendMessage(from, help(prefix, forder, pushname, time, date, sender), text, {quoted: mek})
+                client.sendMessage(from, help(prefix, foto, pushname, time, date, sender), text, {quoted: mek})
                 break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
