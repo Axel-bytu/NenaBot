@@ -1,8 +1,8 @@
-const help = (prefix, nena, pushname, time, date) => {      
+const help = (prefix, fijpg, pushname, time, date) => {      
        return `
 
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓 by 𝐁𝐑𝐎𝐙*❣️
-╽${nena}
+╽${fijpg}
 ╽
 ╽
 ╿
