@@ -1,5 +1,5 @@
 const fs = require('fs')
-nena = fs.readFileSync('./src/nenabot.jpg');
+const nena = fs.readFileSync('./src/nenabot.jpg');
 const help = (prefix, nena, pushname, time, date) => {      
        return `
 
