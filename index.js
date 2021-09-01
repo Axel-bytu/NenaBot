@@ -1098,7 +1098,7 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await await getBuffer(`https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-reply(mess.only.logo)
+/*reply(mess.only.logo)*/
 break
 		
 case 'matrix':
