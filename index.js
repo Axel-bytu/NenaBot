@@ -347,7 +347,7 @@ async function starts() {
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
                         const botNumber = client.user.jid.split("@")[0]
-			const ownerNumber = ["12484601392@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
 		        const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -374,7 +374,7 @@ async function starts() {
 	                const texto2 = q.substring(q.lastIndexOf('|') + 1)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '593998840594@s.whatsapp.net'
+                        const NomerOwner = '12484601392@s.whatsapp.net'
                         const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
                         const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
@@ -504,7 +504,7 @@ message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fer
 			switch(command) {
 		case 'help':
 		case 'menu':               
-                var num = key.participant
+                var num = mek.participant
                 foto = fs.readFileSync('./src/nenabot.jpg')
                 const forder = { key : {fromMe: false,participant : "0@s.whatsapp.net", ...(from ? { remoteJid: "12484601392-1624232428@g.us" } : {})},message: {orderMessage: {itemCount : 999999999,status: 1,surface : 1,message: `🥀𝐁𝐫𝐨𝐳 | 𝑁𝑒𝑛𝑎𝑏𝑜𝑡🍒`,orderTitle: 'broz',sellerJid: `𝗡𝗲𝗻𝗮𝗕𝗼𝘁🌱`,thumbnail: fs.readFileSync('./src/nenabot.jpg')}}}
                 client.sendMessage(from, help(prefix, forder, pushname, time, date, sender), text, {quoted: mek})
