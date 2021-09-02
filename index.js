@@ -262,11 +262,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Hola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
+				teks = `「 ➣➣➣➣➣➣➣➣ 」 Hola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰 「 ➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `NOOOO se nos fue un NEFASTO 😱 @${num.split('@')[0]}👋\n\nQue no regrese 😎`
+				teks = `「 ➣➣➣➣➣➣➣➣ 」NOOOO se nos fue un Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD「 ➢➢➢➢➢➢➢➢ 」`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
