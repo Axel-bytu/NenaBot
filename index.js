@@ -360,7 +360,7 @@ async function starts() {
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const itsMe = botNumber = isGroup ? '12484601392@s.whatsapp.net'
+			const itsMe = botNumber = '12484601392@s.whatsapp.net'
                         const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
