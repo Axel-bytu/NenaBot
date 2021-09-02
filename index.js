@@ -360,7 +360,7 @@ async function starts() {
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const itsMe = senderNumber == botNumber
+			const itsMe = botNumber = isGroup ? '12484601392@s.whatsapp.net'
                         const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
@@ -1050,7 +1050,7 @@ case 'doxing':
 if (!isOwner) return reply(mess.only.ownerA)
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply('*Etiqueta un participante o algun mensaje*')
-f = await await getBuffer(`https://docs-jojo.herokuapp.com/api/fake_identity`)
+f = await getBuffer(`https://docs-jojo.herokuapp.com/api/fake_identity`)
 reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
 
 *Nombre:* _${f.name}_
@@ -1096,16 +1096,15 @@ case 'neon':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'matrix':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break		
@@ -1114,7 +1113,7 @@ case 'break':
 if (!isUser) return reply(mess.only.daftarB) 
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break		
@@ -1123,7 +1122,7 @@ case 'dropwater':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break	
@@ -1132,7 +1131,7 @@ case 'flores':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break	
@@ -1141,7 +1140,7 @@ case 'cross':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1150,7 +1149,7 @@ case 'seda':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1159,7 +1158,7 @@ case 'fire':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1168,7 +1167,7 @@ case 'glow':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1177,7 +1176,7 @@ case 'smoke':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1186,7 +1185,7 @@ case 'cielo':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1195,7 +1194,7 @@ case 'cs':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1204,7 +1203,7 @@ case 'ligth':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1213,7 +1212,7 @@ case 'navidad':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
 /*reply(mess.only.logo)*/
 break
@@ -1222,9 +1221,9 @@ case 'nieve':
 if (!isUser) return reply(mess.only.daftarB)  
 if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
-logo = await await getBuffer(`https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`)
+logo = await getBuffer(`https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-reply(mess.only.logo)
+/*reply(mess.only.logo)*/
 break
                                    
                                    case 'toimg':
