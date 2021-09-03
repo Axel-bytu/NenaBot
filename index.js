@@ -262,11 +262,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `「 ➣➣➣➣➣➣➣➣ 」 Hola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰 「 ➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
+				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」 Hola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰 「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `「 ➣➣➣➣➣➣➣➣ 」NOOOO se nos fue un Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD「 ➢➢➢➢➢➢➢➢ 」`
+				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」NOOOO se nos fue uno Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -341,7 +341,7 @@ async function starts() {
 					insta: 'Espera🥰\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					musica: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
 					musica2: 'Espera cariño estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube❗*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋☹️🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar 𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`,
+					daftarB: `「NO ESTAS REGISTRADO」\n\nCARIÑO NO APARECES EN MI BASE DE DATOS ✋☹️🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}reg Nombre|edad\nEjemplo: ${prefix}reg Nenabot|15`,
 				}
 			}
     			const apakah = ['Si','No']
