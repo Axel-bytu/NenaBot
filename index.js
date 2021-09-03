@@ -360,7 +360,6 @@ async function starts() {
                         const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-			const itsMe = senderNumber == botNumber
                         const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
@@ -887,7 +886,7 @@ break
                   break
 case 'banchat':
 if (!isGroup) return reply('🤔')
-if (!itsMe) return reply(mess.only.ownerB)
+if (!isUser) return reply(mess.only.ownerB)
 if (args.length < 1) return reply('*Amm... para activar usa *1* y para desactivar *0*')
 if (body.endsWith('1')) {
 if (isBanChat) return reply('Este chat ya ah estado baneado!')
