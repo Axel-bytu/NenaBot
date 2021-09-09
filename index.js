@@ -248,11 +248,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」 Hola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}reg y tu nombre|edad\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰 「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
+				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」\n\nHola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}reg y tu nombre|edad\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」NOOOO se nos fue uno Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」`
+				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」\n\nNOOOO se nos fue uno Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD\n\n「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -1112,7 +1112,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nву ѕнαη∂υу'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎'})
 						fs.unlinkSync(ran)
 					})
 					break
