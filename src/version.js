@@ -2,8 +2,8 @@ const version = (prefix, pushname) => {
     return `
 *𝐍𝐄𝐍𝐀𝐁𝐎𝐓 🌀 𝐁𝐑𝐎𝐙*
 
-*Actualizado:* 20 de agosto de 2021
-*Versión actual:* 4.0
+*Actualizado:* 09 de septimbre del 2021
+*Versión actual:* 4.1
 *Ofrecida por:* Axel-bytu™
 
 
