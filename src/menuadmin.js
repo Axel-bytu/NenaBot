@@ -1,5 +1,5 @@
 const menuadmin = (prefix, pushname) => {
- return `Hola aqui los comandos para admins
+ return `Hola ${pushname} aqui los comandos para admins
  _Para que el bot ejecute estos comandos obs es necesario dar admin al bot_
  
  ◪ *COMANDOS DE ADMIN*
