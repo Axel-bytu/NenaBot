@@ -63,6 +63,14 @@ ${fijpg}
   ╿
 ┯┷◉*GRUPOS*
 ╽
+┠❥   ${prefix}unir
+╠ Unir a una persona al grupo
+┠❥ ${prefix}fgc
+╠ Cambiar foto del grupo
+┠❥ ${prefix}ngc
+╠ Cambiar nombre del grupo
+┠❥ ${prefix}dgc
+╠ Cambiar descripcion del grupo
 ┠❥ ${prefix}closegc
 ╠ Cerrar el grupo solo admins
 ┠❥ ${prefix}opengc
@@ -75,13 +83,17 @@ ${fijpg}
 ╠ Quitar el admin
 ┠❥ ${prefix}linkgc
 ╠ Link del grupo
+┠❥${prefix}adminlist
+╠ Nombra a los admins del grupo
 ┠❥${prefix}todos
 ╠ Nombra a todos los del grupo 
-┠❥◉*NSWF* 
-┠❥${prefix}nsfwmenu
-┠❥${prefix}doxing
 ╿
-╰╼❥by 🌀𝐁𝐫𝐨𝐳
+┷┯◉*NSWF* 
+  ╽
+  ┠❥${prefix}nsfwmenu
+  ┠❥${prefix}doxing
+  ╿
+  ╰╼❥by 🌀𝐁𝐫𝐨𝐳
 
 
 `
