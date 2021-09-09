@@ -1,6 +1,6 @@
-const help = (prefix, pushname, time, date) => {      
+const help = (prefix, fijpg, pushname, time, date) => {      
        return `
-
+${fijpg}
 ┏ ❣️*𝐍𝐄𝐍𝐀𝐁𝐎𝐓*❣️
 ╿ 
 ┷┯*INFORMACION*
