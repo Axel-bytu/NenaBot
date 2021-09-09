@@ -335,13 +335,12 @@ async function starts() {
 			}
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
-                        const botNumber = client.user.jid.split("@")[0]
+                        const botNumber = client.user.jid
 			const ownerNumber = ["593998840594@s.whatsapp.net"] // replace this with your number
 		        const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
-			const senderNumber = sender.split("@")[0]
                         const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const isBanned = ban.includes(sender)
 			const groupName = isGroup ? groupMetadata.subject : ''
