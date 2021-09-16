@@ -248,11 +248,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」\n\nHola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}reg y tu nombre|edad\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
+				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣ 」\n\nHola @${num.split('@')[0]}\nUn gusto en conoserte Bienvenido a *${mdata.subject}* el mejor grupo 🥰\n\nOjito sigue las reglas del grupo si no, pa fuera cariño los admins te patean 🧐\n\nPara utilizar el bot registrate con el comando ${prefix}reg y tu nombre|edad\n\nPara ver los demas comandos utiliza ${prefix}help\n\nNo hagas spam cariño 🥰\n\n「 ➢➢➢➢➢➢➢➢➢➢➢➢➢ 」\n\n𝐍𝐞𝐧𝐚𝐁𝐨𝐭ꨄ︎`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣➣ 」\n\nNOOOO se nos fue uno Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD\n\n「 ➢➢➢➢➢➢➢➢➢➢➢➢➢➢ 」`
+				teks = `「 ➣➣➣➣➣➣➣➣➣➣➣➣➣ 」\n\nNOOOO se nos fue uno Adios 😱 @${num.split('@')[0]}👋\n\nnadie te va extrañar, ni tu ex...XD\n\n「 ➢➢➢➢➢➢➢➢➢➢➢➢➢ 」`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -486,7 +486,7 @@ key:
 { fromMe: false,
 participant: `0@s.whatsapp.net`, ...(from ?
 { remoteJid: "status@broadcast" } : {}) },
-message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Fernanda`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}}         
+message: { "imageMessage": { "mimetype": "image/jpeg","caption": `🥀Axel y Yoselin`, 'jpegThumbnail': fs.readFileSync('./src/nenabot.jpg')}}}         
                 client.sendMessage(from, help(prefix, fijpg, pushname, time, date, sender), text, {quoted: mek})
                 break
                 case 'otak':
@@ -1011,10 +1011,7 @@ break
 //CREACION DE STICKERS Y VARIOS				
 				
 				case 's':
-				case 'tucson':
-				case 'opa':
-				case 'shan':
-				case 'nefasto':
+				case 'snena':
 				case 'stiker':
 				case 'sticker':
 				case 'stickergif':
@@ -1142,7 +1139,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=hamilton49`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=apivinz`)
                 if (anu.error) return reply(anu.error)
                 infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1156,7 +1153,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
 	        reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=shanduy49`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=apivinz`)
                 if (anu.error) return reply(anu.error)
                 infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1170,7 +1167,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
 		reply(mess.only.mpv)
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
+		anu = await fetchJson(`https://api-broz.herokuapp.com/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error.yt)
 		teks = `*⌈ Video Encontrada ✅ ⌉*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
 		lagu = await getBuffer(anu.result.thumbnail)
@@ -1233,27 +1230,27 @@ reply(`*Doxeo de ${mentionUser} echo por Axel🌀*
 *Estado:* _${f.state}_
 *Pais:* _${f.country}_
 
-=====================
+➣➣➣➣➣➣➣➣➣➣➣➣➣
 
 *E-Mail:* ${f.email}
 *Contraseña:* ${f.password}_
 *Telefono:* _${f.phone}_
 
-=====================
+➣➣➣➣➣➣➣➣➣➣➣➣➣
 
 *No. Tarjeta de credito:* ${f.card}
 *CVV:* _${f.code}_
 *Fecha de vencimiento:* _${f.date}_
 *PIN:* _${f.pin_code}_
 
-=====================
+➣➣➣➣➣➣➣➣➣➣➣➣➣
 
 *Peso:* _${f.weight}_
 *Estatura:* _${f.height}_
 *Tipo de sangre:* _${f.blood_type}_
 *Estado:* _${f.status}_
 
-=====================
+➣➣➣➣➣➣➣➣➣➣➣➣➣
 
 *FDx Bt 🔥Broz🔥*
 `)
@@ -1276,7 +1273,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break		
 		
 case 'break':
@@ -1285,7 +1281,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/breakwall?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break		
 		
 case 'dropwater':
@@ -1294,7 +1289,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/dropwater?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break	
 		
 case 'flores':
@@ -1303,7 +1297,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/flowertext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break	
 		
 case 'cross':
@@ -1312,7 +1305,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/crosslogo?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'seda':
@@ -1321,7 +1313,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/silktext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'fire':
@@ -1330,7 +1321,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/flametext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'glow':
@@ -1339,7 +1329,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/glowtext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'smoke':
@@ -1348,7 +1337,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/smoketext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'cielo':
@@ -1357,7 +1345,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/skytext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 	
 case 'cs':
@@ -1366,7 +1353,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/cslogo?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'ligth':
@@ -1375,7 +1361,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/lithgtext?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'navidad':
@@ -1384,7 +1369,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/crismes?apikey=apivinz&text=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
 		
 case 'nieve':
@@ -1393,7 +1377,6 @@ if (args.length < 1) return reply('*Y el texto para crear el logo donde esta?*')
 reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado*`)		
 logo = await getBuffer(`https://api.zeks.xyz/api/snowwrite?apikey=apivinz&text1=${q}`)
 client.sendMessage(from, logo, image, {quoted: mek, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘉𝘳𝘰𝘻 🔥*'})
-/*reply(mess.only.logo)*/
 break
                                    
                 
@@ -1745,8 +1728,8 @@ break
         if (budy.includes(`.nena canta para mi`)) {
             reply(`no cariño canto feo`)
               }
-        if (budy.includes(`.nena si`)) {
-            reply(`no cariño`)
+        if (budy.includes(`.nena que tal el grupo`)) {
+            reply(`hay bien son una manada de bagos jejej`)
               }
         if (budy.includes(`.nena a que hora`)) {
             reply(`a las 6 en el hotel uwu`)
@@ -1841,11 +1824,11 @@ break
         if (budy.includes(`.nena eres trol`)) {
             reply(`la verdad las cosas como son`)
               }
-        if (budy.includes(`.nena el you tuber`)) {
+        if (budy.includes(`.nena quien es broz tiles`)) {
             reply(`si te paso mi canal`)
               }
-        if (budy.includes(`.nena eres you tuber`)) {
-            reply(`no vivi de videos`)
+        if (budy.includes(`.nena cual es tu youtuber favorito`)) {
+            reply(`Broz tiles jjeje`)
               }
         if (budy.includes(`.nena que no sabes nena`)) {
             reply(`quien soy`)
@@ -1889,6 +1872,9 @@ break
         if (budy.includes(`.nena funalo`)) {
             reply(`ok cariño `)
               }
+        if (budy.includes(`.nena soy hombre`)) {
+            reply(`quien me lo confirma jejej`)
+              }
         if (budy.startsWith(`Nena`)) {
         const none = fs.readFileSync('./anishan/menu.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1917,7 +1903,7 @@ break
         const none = fs.readFileSync('./anishan/frases otaku.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	if (budy.startsWith(`Nena hot`)) {
+	if (budy.startsWith(`Hot nena`)) {
         const none = fs.readFileSync('./anishan/nena hot.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
